@@ -1,0 +1,355 @@
+---
+title: "Fish Structure"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+## Spatial & Geometric Definition
+* Geometry Type: Point or Polygon (Fish_Structure_Location).
+
+* Spatial Delineation: Precise spatial coordinates or bounding footprints of submerged structural habitat units embedded in backwater cuts, secondary channels, and plunge basins.
+
+* Component Typology: Anchored large woody debris (LWD) complexes, rootwad revetments, brush bundles, boulder clusters, and wooden crib reefs.
+
+### Primary Restoration & Engineering Objectives
+* Cover & Velocity Shelters: Create localized zones of zero velocity (0.0 ft/s) alongside predatory feeding seams for gamefish species (largemouth bass, bluegill, black crappie, walleye).
+
+* Macroinvertebrate Substrate: Provide durable, non-silt-covered hard biological surfaces for net-spinning caddisflies, mayflies, and epilithic periphyton.
+
+* Thermal Microhabitats: Maintain localized deep cover within overwintering basins, preventing schooling fish from expending critical winter energy reserves.
+
+### Typical Cross-Sections, Dimensions & Sizing Criteria
+* Boulder Clusters: Groups of 3 to 7 interlocking Class IV–V boulders (d 50 =24 to 36 in), placed in staggered diamond formations spanning 15×25 ft footprints.
+
+* Rootwad / Tree Deflectors: Hardwood tree trunks (≥18 in diameter) with intact root fans (6 to 10 ft diameter), projecting 10 to 20 ft from channel margins.
+
+* Ballast Requirements: Stone ballast sizing calculated to offset submerged wood buoyancy by a factor of safety FS≥1.75 (1.5 to 2.0 tons of rock per full-size tree bole).
+
+### Construction & Implementation Methodology
+* Barge-Mounted Crane Placement: Lowered into aquatic cuts using cable chokers or mechanical clamshells.
+
+* Anchoring Systems: Hardwoods secured to riverbeds using duckbill earth anchors, helical steel ground screws, or heavy galvanized aircraft cables (3/8 in diameter) clamped through drilled stone anchors.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Underwater Acoustic Surveys: High-resolution multi-beam side-scan sonar runs conducted at 2- and 5-year intervals to verify structural presence, orientation, and absence of silt smothering.
+
+* Biological Electrofishing: Annual fisheries index surveys comparing fish density at structure sites against un-structured control reaches.
+
+
+## Spatial Feature Attributes
+
+### Definition
+FishStructure features are engineered structures designed to improve fish habitat or allow improved fish movement through the river system by modifying hydraulics, providing cover, or circumventing in-channel barriers.
+
+### Purpose
+Improving fish habitat and facilitating fish movement through the river system are critical steps in maintaining the health, biodiversity, and sustainability of the UMR ecosystem. These efforts support a wide range of species, restore ecological functions, enhance fish populations, and contribute to the local economy through sustainable fisheries and recreation.
+
+### Applicability
+Fish structures are applicable wherever in-channel barriers, degraded habitat, or limited connectivity constrain fish movement or habitat quality within Upper Mississippi River System (UMRS) restoration projects. They are typically used at dams, diversion structures, constricted channels, and along eroding banks or simplified shorelines to restore passage, create refuge, and diversify hydraulic and substrate conditions. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: Points should have well top elevation as Z value if available.
+
+### FishStructure
+(polygon) – An engineered structure designed to improve fish habitat or allow improved fish movement through the river system.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attributes</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Design</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>TargetFishSpecies</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>StartStation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>EndStation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Channel Modifications</td>
+      <td>Measures taken to train the main channel of a river and to modify secondary channels.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific fish structure design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fish LUNKERS</td>
+      <td>Engineered overhanging-bank structure that provides fish habitat and bank stabilization, generally about 8 ft long, 1–2 ft tall and 3 ft deep, constructed of hardwood, concrete, or plastic lumber.</td>
+    </tr>
+    <tr>
+      <td>Fish bypass channel</td>
+      <td>Channel created to circumvent in-channel barriers to natural fish movement.</td>
+    </tr>
+    <tr>
+      <td>Fish ladder</td>
+      <td>Engineered step or pool-and-weir structure created to circumvent in-channel barriers to natural fish movement.</td>
+    </tr>
+    <tr>
+      <td>Natural boulder ramp</td>
+      <td>Short, steep ramp comprised of boulders created to circumvent in-channel barriers to natural fish movement.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature, including design intent, structural details, and operational assumptions.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912.</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929.</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other; note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+### TargetFishSpecies
+Specific fish species or species groups the structure is intended to benefit (e.g., pallid sturgeon, paddlefish, centrarchids). May include one or more species names or functional groups.
+
+### StartStation
+Beginning station of the feature, typically referenced to a project or river engineering baseline (e.g., 10+00).
+
+### EndStation
+Ending station of the feature along the same baseline.
+
+### sdsMetaDataID
+References attached metadata (e.g., design reports, hydraulic modeling files, biological objectives).
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., design drawings, plans and profiles, construction photographs, as-built surveys) documenting the fish structure.

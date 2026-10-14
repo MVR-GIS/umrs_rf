@@ -1,0 +1,35 @@
+---
+title: "Restoration Features"
+format: html
+---
+
+
+
+## Purpose
+Restoration of ecosystems through a variety of features, including wetlands, riparian areas, aquatic systems, and oyster reefs. The goal of these restoration projects is to restore the natural function, structure, and processes of degraded ecosystems.
+
+## Notes
+Data Sources - If a project has been constructed, CAD drawings or As-Built drawings should be used to guide feature digitizing. If a project is in the planning stages, the schema can be used to record potential features and track which planning alternatives they participate in. Elevation data should be attached to geometries as specified in this document.
+
+These feature classes are stored in the MVR UMRR Oracle database to ensure that authoritative data is available to all. See these reference guides to access the oracle database for editing features.
+
+Restoration features are a topical group of feature classes used to represent, at various phases, engineering features constructed or implemented to directly meet the goals and objectives of programs and the projects they support.
+
+## Restoration Features
+* DredgingEvent (polygon) – The extent of the area subject to dredging action. (area of material removal)
+* Embankment (polygon) – The centerline of an embankment for controlling the waters of the sea, river, or other water bodies.
+* EmbankmentCenterline (line) – The centerline of an embankment for controlling the waters of the sea, river, or other water bodies.
+* FishStructure (polygon) – An engineered structure designed to improve fish habitat or allow improved fish movement through the river system.
+* FloraPlantingOrSeeding (polygon) – A location where vegetation is planted or seeded.
+* FlowChannel (polygon) – An excavated channel (via mechanical or hydraulic means) intended to allow for the flow of water across, into, or out of the project area or any subcomponent of a project area.
+* Island (polygon) – Island structures engineered with a variety of techniques and materials that serve as barriers to flow, wind and waves.
+* IslandLine (line) – Island structures engineered with a variety of techniques and materials that serve as barriers to flow, wind and waves.
+* MoistSoilMgmtUnits (polygon) – Areas or units designed to enhance wetland habitat through the use of water containment, water supply and water control structures.
+* Notch (point) – A notch in a riverine flow structure (typically a dike) used to control the flow of water into and out of the low flow area.
+* PumpStation (point) – A location where a pump is located to pump water from the interior of a levee.
+* Revetment (polygon) – An area faced with stone or other material along the shoreline designed to stabilize the bank or protect it from erosion.
+* RiverineFlowStructureLine (line) – A natural or man-made flow (or sediment) control structure in a water course or water body such as a dike or weir. This feature should not be used to model a levee.
+* RiverineFlowStructure (polygon) – A natural or man-made flow (or sediment) control structure in a water course or water body such as a dike or weir. This feature should not be used to model a levee.
+* WaterControlStructure (point) – A structure designed to allow flow through an embankment.
+* Well (point) – A shaft dug or drilled into the Earth for the purpose of extracting fluids from the subsurface, collecting environmental samples, injecting fluids into the subsurface or extracting contamination or other impurities from the subsurface.
+* Wetland (polygon) – Geospatial feature composed of one unique wetland class (no complexes) used to determine USACE jurisdiction and regulatory impacts.

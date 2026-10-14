@@ -1,0 +1,63 @@
+---
+title: "Restoration Features Crosswalk to Environmental Design Handbook Chapters"
+format: html
+---
+
+
+Environmental Design Handbook, 2012 documents the array of restoration tools and lessons learned to aid in the design of future Habitat Rehabilitation and Enhancement Projects (HREP). These restoration tools include shoreline protection, island creation, water level management, backwater dredging, secondary channel modifications and river training structures, aeration, and floodplain and tributary restoration. These tools are captured to a GIS database as Restoration Features for mapping, analysis for feature impact, and future planning.
+
+The following provides restoration features alignment to the chapters of the design handbook.
+
+## Chapter 4
+### Shoreline and Riverbank Protection
+Includes the following Restoration Features:
+
+Revetments
+Riverine Flow Structures (line and polygon)
+Embankments (line and polygon)
+
+## Chapter 5
+### Water Level Management
+Includes the following Restoration Features:
+
+Dredging
+Fish Structures
+Embankments (line and polygon)
+Moist Soil Management Units
+Pump Stations
+Wells
+
+## Chapter 6
+### Dredging
+Includes the following Restoration Features:
+
+Dredging
+Embankments (line and polygon)
+Water Control Structures
+
+## Chapter 7
+### River Training Structures and Secondary Channel Modification
+Includes the following Restoration Features:
+
+Riverine Flow Structures (line and polygon)
+Fishing Structures
+Notches
+Revetments
+
+## Chapter 8
+### Floodplain Restoration
+Includes the following Restoration Features:
+
+Wetlands
+Flora Planting and Seeding
+Dredging
+
+## Chapter 9
+### Island Design
+Includes the following Restoration Features:
+
+Island (line and polygon)
+Dredging
+Notches
+Riverine Flow Structures (line and polygon)
+Wetlands

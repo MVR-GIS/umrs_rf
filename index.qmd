@@ -1,0 +1,22 @@
+---
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css  
+---
+  <img src="images/IMG_0285banner.jpg" alt="Example" style="max-width: 100%; max-height: 300px; height: auto;">
+  
+# Preface {.unnumbered}
+
+This restoration features book documents the key design elements of ecosystem restoration features built on the Upper Mississippi River System (UMRS). This data model has been developed to represent the wide range of restoration practices employed on the UMRS throughout many years and be adaptable into the future. As we learn lessons about restoration, this data model has evolved along with our best practice.
+
+## Authors
+  - Michael Dougherty, Geographer, US Army Corps of Engineers, Rock Island District
+  - Bobby Oliver, Geographer, US Army Corps of Engineers, Rock Island District
+
+
+## Abstract
+

@@ -1,0 +1,17 @@
+/* Default (light theme) – black grid lines */
+.table-grid {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-grid th,
+.table-grid td {
+  border: 1px solid black;
+  padding: 4px;
+}
+
+/* Override when Quarto is in dark mode */
+.quarto-dark .table-grid th,
+.quarto-dark .table-grid td {
+  border-color: white;
+}

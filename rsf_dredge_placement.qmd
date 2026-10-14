@@ -1,0 +1,342 @@
+---
+title: "Dredging Placement"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Polygon (Dredge_Placement_Site).
+
+* Spatial Delineation: Bounded footprint of upland disposal sites, confined disposal facilities (CDFs), in-water containment cells, or marsh nourishment zones receiving dredged sediments.
+
+* Placement Typology: Terrestrial containment basins, in-water island fill cells, marsh thin-layer nourishment zones, and beneficial-use stockpiles.
+
+### Primary Engineering & Operational Objectives
+* Dredged Material Retention: Securely hold thousands of cubic yards of slurried or mechanically excavated silts and sands without catastrophic containment failure.
+
+* Effluent Water Clarification: Allow sufficient detention settling time for hydraulic slurries to drop suspended solids, ensuring return water meets strict Clean Water Act Section 401 state water quality standards.
+
+* Beneficial Reuse & Topographic Elevation: Elevate low-lying floodplain terrains to create flood-refugia ridges, island cores, or agricultural soil enhancements.
+
+### Typical Cross-Sections, Dimensions & Sizing Criteria
+* Cell Capacities: Sized between 20,000 and 500,000+ cubic yards of material.
+
+* Perimeter Containment Dikes: Compacted earthen containment dikes (heights6 to 15 ft, side slopes 1V:3H) with minimum 3.0-ft interior freeboard.
+
+* Weir Dewatering Structures: Adjustable rectangular overflow weir boxes (morning-glory or stoplog weirs) sized to govern effluent decant rates based on Stokes' Law hydraulic settling velocities.
+
+### Construction & Implementation Methodology
+* Hydraulic Discharge Management: Pipeline discharge placed at the furthest point from the overflow weir structure to maximize hydraulic residence time and particle settling.
+
+* Polymer / Flocculant Injection: When dredging fine colloidal clays, organic flocculants may be injected into the slurry line to accelerate settling.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Effluent Turbidity Monitoring: Continuous water testing at the weir discharge for Total Suspended Solids (TSS) and turbidity (NTU), maintaining compliance with state mixing-zone permits.
+
+* Dewatering & Crusting Management: Post-dredging trenching with specialized marsh excavators to promote rapid drying, desiccation, and soil consolidation.
+
+
+## Spatial Feature Attribute
+### Definition
+The extent of the area covered by dredged material.
+
+### Purpose
+Dredging placement features are used to document and manage the location, extent, and characteristics of areas receiving dredged material. Mapping these features supports design coordination, environmental compliance, maintenance planning, and evaluation of habitat restoration outcomes.
+
+### Applicability
+This applies to all dredging placement features (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute as available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+* Geometry Note: No Z values are needed for this feature.
+
+### DredgingPlacement
+(polygon) - The extent of the area covered by dredged material. When the use is Island, should we be putting polygons for both in the same area?
+
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Design</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>VolumeCY</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Acres</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dredge Placement</td>
+      <td>Add text for description.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Island</td>
+      <td>Island building.</td>
+    </tr>
+    <tr>
+      <td>Levee</td>
+      <td>Build a new levee or strengthen and existing levee as part of a moist soil unit.</td>
+    </tr>
+    <tr>
+      <td>Floodplain Depth Diversity</td>
+      <td>Placement to increase floodplain topographic diversity and habitat.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Undocumented use.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is a integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by  a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other, note datum in sdsFeatureDescription</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum</td>
+    </tr>
+  </tbody>
+</table>
+
+### VolumeCY
+Volume of material removed in cubic yards.
+
+### Acres
+Acreage of feature.
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+References attached media.
+
+### sdsID
+References attached media.
+
+### mediaIDFK
+References attached media.
+

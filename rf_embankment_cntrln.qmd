@@ -1,0 +1,354 @@
+---
+title: "Embankment Centerline"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+## Spatial & Geometric Definition
+* Geometry Type: Polyline (Embankment_Centerline_Line).
+
+* Spatial Delineation: Longitudinal survey axis running along the geometric centroid of the top crest of the embankment prism.
+
+* Data Fields: Linear stationing (0+00), top-of-crest design profile elevation, horizontal curve radii, design freeboard height, and crest width domain codes.
+
+### Primary Restoration & Engineering Objectives
+* Engineering Geometry Control: Serves as the master horizontal and vertical control baseline for all construction layout, cross-sectional cut/fill grading, and post-settlement monitoring.
+
+* Profile Consistency: Establishes the uniform, non-dip crest grade to ensure overtopping occurs exclusively at designated, armored spillway notches rather than across unprotected earthen crest segments.
+
+### Typical Cross-Sections, Dimensions & Sizing Criteria
+* Survey Baseline: Stationing established at 100-ft linear increments with permanent control monuments positioned at Points of Curvature (PC) and Points of Tangency (PT).
+
+* Grade Tolerances: Construction grade tolerance along centerline is strict: −0.00 ft/+0.20 ft from contract design profile.
+
+### Construction & Implementation Methodology
+* RTK-GPS & Total Station Layout: Field staked with high-precision RTK-GPS tied directly into national State Plane Coordinates (NAD83) and NAVD88 elevation benchmarks.
+
+* Machine Control Integration: Centerline coordinate and profile strings loaded into 3D GPS machine-guidance earthmoving excavators and motor graders.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Settlement Monitoring: Permanent brass survey disks embedded in concrete surface monuments every 500 ft along the centerline, surveyed annually to track long-term primary consolidation of underlying river silts.
+
+
+## Spatial Feature Attribute
+
+### Definition
+A linear embankment feature represents the centerline of a raised earthen structure constructed to control or contain water, provide flood protection, or create topographic diversity within floodplain ecosystems.
+
+### Purpose
+Embankment systems are used to provide adequate flood protection, manage water levels, and shape floodplain topography. Linear representation of the embankment centerline supports design, hydraulic analysis, and asset management by defining the primary alignment of the structure. Embankments can isolate management units, guide or restrict flows, protect infrastructure or habitats from inundation or erosion, and create elevated or sheltered areas that support diverse plant and wildlife communities.
+
+### Applicability
+Linear embankment features are applicable wherever centerline representation of raised earthen structures is needed for planning, design, modeling, or operations within Upper Mississippi River System (UMRS) restoration projects. This includes levees, berms around MSMUs and backwater lakes, training embankments, and other floodplain earthworks that control water or create topographic variation. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: Line should be 3D; elevations should be taken from as-built survey or design documents.
+
+### Embankment
+(line) – The centerline of a linear, raised earthen structure, for the purpose of controlling water or creating topographic diversity in floodplain ecosystems.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attributes</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Design</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>CrestWidthFT</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>EnbankmentMaterial</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>EnbankmentLenghtFT</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>EmbankmentSideSlope</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+> Note: Specific coded values for Type were not provided for the line Embankment.  
+> Embankments are commonly associated with Floodplain Restoration or Water Level Management in project schemas.
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific embankment design feature categories.
+
+> Note: SubType coded values were not provided for the line Embankment.  
+> Example values might include Exterior Berm, Interior Berm, Levee Centerline, or Training Embankment, aligned with the polygon Embankment subtypes.
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is a integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by  a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature, including alignment, purpose, and notable design characteristics.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values for the 3D line.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912.</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929.</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other; note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+### EnbankmentMaterial
+Primary material used to construct the embankment, identified for the centerline segment.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sand</td>
+      <td>Sand material.</td>
+    </tr>
+    <tr>
+      <td>Clay</td>
+      <td>Clay material.</td>
+    </tr>
+    <tr>
+      <td>Sand with clay core</td>
+      <td>Embankment composed primarily of sand with a central clay core.</td>
+    </tr>
+    <tr>
+      <td>Sand with clay cap</td>
+      <td>Embankment composed primarily of sand with a clay cap.</td>
+    </tr>
+    <tr>
+      <td>Earthen</td>
+      <td>Some mixture of sand and clay, used when material type is not specified in design or as-built drawings.</td>
+    </tr>
+  </tbody>
+</table>
+
+### CrestWidthFT
+Width of the embankment top or crest in feet (associated with the line segment).
+
+### EnbankmentLenghtFT
+Length of the embankment in feet for the represented line feature (note: field name includes typographical error “Lenght” retained for schema consistency).
+
+### EmbankmentSideSlope
+Side slope of the embankment, expressed as a horizontal-to-vertical ratio (e.g., 3H:1V), applicable to the represented centerline segment.
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., design profiles, cross-sections, levee certification documents, as-built surveys, photographs) documenting the embankment.

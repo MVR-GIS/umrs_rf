@@ -1,0 +1,410 @@
+---
+title: "Flora Planting Seeding"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Polygon (Flora_Planting_Area).
+
+* Spatial Delineation: Managed zones receiving revegetation treatments across restored island crests, moist soil units, dredge disposal sites, and riparian forest floodplains.
+
+* Vegetation Types: Hard-mast bottomland hardwoods, native emergent wetland tubers/plugs, pollinator forb mixes, and deep-rooted native warm-season prairie grasses.
+
+### Primary Restoration & Engineering Objectives
+* Soil Bio-Stabilization: Rapid root-mesh development to anchor sandy and fine-grained dredged placement materials against wave-wash and flood shear stress.
+
+* Wildlife Mast Production: Re-establish critical hard-mast forest species (swamp white oak, pin oak, shellbark hickory, pecan) displaced by altered post-dam hydrologic regimes.
+
+* Invasive Species Suppression: Establish continuous native vegetative cover to prevent colonization by monotypic reed canary grass (Phalaris arundinacea).
+
+### Typical Specifications, Densities & Seed Mixes
+* Hard-Mast Tree Stock: Root Production Method (RPM) or bare-root containerized saplings (1.0-gal to 3.0-gal pots, ≥0.5 in caliper). Planted at densities of 200 to 300 stems/acre on 12×12 ft to 15×15 ft grids.
+
+* Riparian Seed Mixes: Native cool- and warm-season grasses (Virginia wildrye, river bulrush, cordgrass, bluejoint grass) broadcast at 10 to 20 lbs Pure Live Seed (PLS)/acre.
+
+* Emergent Wetlands: Bare-root tubers/plugs of Sagittaria latifolia and Scirpus fluviatilis installed along littoral margins (0.5 to 2.0 ft water depth) on 3-ft centers.
+
+### Construction & Implementation Methodology
+* Site Preparation: Multi-pass forestry mowing followed by aquatic-approved glyphosate herbicide treatments to eradicate invasive root mats.
+
+* Shelter Tube Installation: Hardwood saplings protected with 48- to 60-in rigid, ventilated photodegradable polyethylene tree shelters staked with rot-resistant white oak stakes to eliminate deer browse and rodent girdling.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Survival Censuses: Fixed-radius inventory plots (0.1 acre) evaluated at months 12, 24, and 36 post-planting. Target standard is ≥80% survival density.
+
+* Herbicide Touch-Ups: Backpack spot-spraying or mechanical brush-cutting around tree collars for 3 consecutive growing seasons until sapling crowns overtop competing weeds.
+
+## Spatial Feature Attribute
+
+### Definition
+Flora Planting or Seeding is a floodplain restoration measure in which vegetation is intentionally planted or seeded to improve natural floodplain function and habitat.
+
+### Purpose
+Flora planting or seeding is used to establish or enhance native plant communities, stabilize soils, increase structural and species diversity, and provide food and cover for wildlife. These actions support long-term habitat goals, improve resilience to flooding and disturbance, and help restore natural floodplain processes such as nutrient cycling and sediment retention.
+
+### Applicability
+Flora planting or seeding is applicable wherever vegetation needs to be established, enhanced, or converted within Upper Mississippi River System (UMRS) restoration projects. Typical applications include revegetating disturbed areas, restoring floodplain forests, wetlands, and prairies, improving shoreline and island stability, and enhancing terrestrial and aquatic edge habitats. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+### FloraPlantingOrSeeding
+(polygon) – A location where vegetation is planted or seeded.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attributes</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Design</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>PlantingDate</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>DominantSpecies1</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>DominantSpecies2</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>DominantSpecies3</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>MastPlanting</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Shoreline Protection</td>
+      <td>Measures taken to reduce erosion from banks and islands due to wind, wave, and ice action.</td>
+    </tr>
+    <tr>
+      <td>Floodplain Restoration</td>
+      <td>Measures taken to improve natural floodplain function and habitat.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific planting or seeding design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tree planting</td>
+      <td>Planting of tree species in floodplain areas that have appropriate soil types and water regimes.</td>
+    </tr>
+    <tr>
+      <td>Wetland planting</td>
+      <td>Planting of wetland species in areas with suitable hydrology and soils to establish or enhance wetland habitat.</td>
+    </tr>
+    <tr>
+      <td>Prairie Planting</td>
+      <td>Planting of prairie species in floodplain areas with appropriate soil types and water regimes.</td>
+    </tr>
+    <tr>
+      <td>Floodplain Forest Planting</td>
+      <td>Planting or augmentation of native floodplain tree and shrub species to establish or restore forested floodplain habitat.</td>
+    </tr>
+    <tr>
+      <td>Timber Stand Improvement</td>
+      <td>Silvicultural treatments within existing forest stands (e.g., thinning, release, underplanting) to improve species composition, structure, and habitat quality.</td>
+    </tr>
+    <tr>
+      <td>Aquatic Vegetation</td>
+      <td>Planting or seeding of emergent, submergent, or floating-leaved aquatic vegetation to improve aquatic habitat and stabilize substrates.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been implemented (planted/seeded) by USACE. Once implemented by USACE, it remains classified as USACE Built even if later maintained or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing planting or habitat area not originally established by USACE has been enhanced by a USACE action.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing planting area not established by USACE has been directly improved or repaired by USACE (e.g., replanting after failure).</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>Planting/seeding feature planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Planting/seeding feature implemented by another organization or government agency and integral to the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>Function of an existing planting, built by another organization, enhanced by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>Existing planting directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common or management name of the planting area.
+
+### sdsFeatureDescription
+A narrative describing the planting or seeding feature, including objectives, methods, and any notable site conditions.
+
+### RestorFeatVdatum
+Vertical datum of any elevations recorded in the attribute table (if used for related features).
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912.</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929.</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other; note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+### PlantingDate
+The date the planting or seeding was carried out (or first completed).
+
+### DominantSpecies1
+Dominant or co-dominant species planted or seeded within the feature. Percentage of the planting mix can be included as part of the value or in sdsFeatureDescription.
+
+### DominantSpecies2
+Second dominant or co-dominant species planted or seeded. Percentage of the planting mix can be included.
+
+### DominantSpecies3
+Third dominant or co-dominant species planted or seeded. Percentage of the planting mix can be included.
+
+### MastPlanting
+Indicates whether the planting provides mast (nuts, acorns, berries, etc.) important to wildlife species.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Yes</td>
+      <td>Planting intended to provide mast for wildlife.</td>
+    </tr>
+    <tr>
+      <td>No</td>
+      <td>Planting not specifically intended as a mast-producing planting.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Mast function not specified.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsMetaDataID
+References attached metadata (e.g., seed mix specifications, planting plans, monitoring protocols).
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., photographs, planting plans, seed tags, monitoring reports) documenting the planting or seeding.

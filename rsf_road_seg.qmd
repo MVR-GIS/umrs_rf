@@ -1,0 +1,437 @@
+---
+title: "Road Segment"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Polyline (Road_Segment_Centerline).
+
+* Spatial Delineation: Linear centerlines of service corridors, levee crest roads, haul paths, and permanent public access roadways servicing restoration sites.
+
+* Data Fields: Road Name, Road Class (Maintenance Service vs. Public Access), Surface Material, Top Width, Design Speed, and Maximum Axle Load Rating.
+
+### Primary Engineering & Operational Objectives
+* Civil Network Connectivity: Form the continuous vehicular transportation network allowing USACE, USFWS, and State DNR personnel to access water control structures, pump stations, and habitat monitoring reaches.
+
+* Emergency Flood-Fighting Corridor: Serve as heavy haul routes for rock trucks and sandbagging operations during high-water river emergencies.
+
+### Typical Cross-Sections, Dimensions & Sizing Criteria
+* Roadway Widths: Crest service roads span 10.0 to 14.0 ft; two-way access roads span 20.0 to 24.0 ft.
+
+* Turnout Geometry: Passing turnouts (width20 ft, length 50 to 100 ft) established every 1,000 to 1,500 ft along single-lane levee roads.
+
+* Maximum Longitudinal Gradients: Grades held below 6% (approaches to levee crests restricted to <8%).
+
+### Construction & Implementation Methodology
+* Grading & Compaction: Motor graders establishing crowned profiles; heavy vibratory rollers sealing surface aggregates to shed rainfall without softening subgrades.
+
+* Culvert Crossings: Corrugated metal pipes (CMP) or dual-wall HDPE culverts (18 to 36 in) installed at low points with riprap flared end sections to ensure ditch conveyance.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Surface Regrading & Dust Abatement: Annual post-winter grading, spot aggregate replenishment, and application of calcium chloride dust palliatives near public trail intersections.
+
+## Spatial Feature Attributes
+### Definition
+A road segment is a portion of a road with similar characteristics such as number of lanes, surface type, or functional use, represented as a continuous linear feature.	Road Segment: A road segment represents a section of a road or access route within a project area.
+
+### Purpose
+Road segments are used to document and manage distinct portions of project roads with consistent physical or operational characteristics. Segmenting roads in this way supports design, construction, maintenance, access management, and analysis of transportation and operational access within restoration projects.
+
+### Applicability
+Road segments are applicable wherever project-related roads or access routes occur within Upper Mississippi River System (UMRS) restoration areas. They are typically used to represent project access roads, levee-top roads, service roads, and internal circulation routes that provide construction, operations, maintenance, or public access. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+### RoadSegment
+(line) – A portion of a road with similar characteristics such as the number of lanes or surface type.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>fieldMeasure</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>isAnchorSection</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>segmentLength</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>segmentLengthUOM</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>roadSegStatus</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias: Restoration_Type)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Restoration_Type</td>
+      <td>Support feature</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Road Utility</td>
+      <td>Road utility</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other, note datum in sdsFeatureDescription</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum</td>
+    </tr>
+  </tbody>
+</table>
+
+### fieldMeasure
+Linear reference value or measure (e.g., stationing or chainage) associated with the road segment, used to relate the segment to field measurements, plans, or other linear referencing systems.
+
+### isAnchorSection
+Boolean indicator identifying whether this segment serves as an anchor or reference section for the road network (e.g., a control/benchmark segment used for indexing or linear referencing).
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Yes</td>
+      <td>Segment is an anchor/reference section.</td>
+    </tr>
+    <tr>
+      <td>No</td>
+      <td>Segment is not an anchor/reference section.</td>
+    </tr>
+  </tbody>
+</table>
+
+### segmentLength
+Numeric length of the road segment, recorded in the units specified by segmentLengthUOM.
+
+### segmentLengthUOM
+Unit of measure for segmentLength.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FT</td>
+      <td>Feet</td>
+    </tr>
+    <tr>
+      <td>M</td>
+      <td>Meters</td>
+    </tr>
+    <tr>
+      <td>KM</td>
+      <td>Kilometers</td>
+    </tr>
+    <tr>
+      <td>MI</td>
+      <td>Miles</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other unit; describe in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unit of measure is not known.</td>
+    </tr>
+  </tbody>
+</table>
+
+### roadSegStatus
+Operational or physical status of the road segment.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Planned</td>
+      <td>Road segment is proposed or planned but not yet constructed.</td>
+    </tr>
+    <tr>
+      <td>Active</td>
+      <td>Road segment is constructed and in use.</td>
+    </tr>
+    <tr>
+      <td>Limited Use</td>
+      <td>Road segment is in place but subject to seasonal or restricted use.</td>
+    </tr>
+    <tr>
+      <td>Decommissioned</td>
+      <td>Road segment is no longer maintained or intended for regular use.</td>
+    </tr>
+    <tr>
+      <td>Removed</td>
+      <td>Road segment has been physically removed or reclaimed.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Status has not been determined.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.

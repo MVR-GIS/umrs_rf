@@ -1,0 +1,384 @@
+---
+title: "Borehole Points"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Point (Geotechnical_Borehole_Point).
+
+* Spatial Delineation: Exact geographic surface coordinates of subsurface geotechnical exploration borings drilled during project investigation and design phases.
+
+* Associated Data Fields: Hole ID, surface ground elevation, depth to bedrock, depth to groundwater, sampling method, and laboratory test links.
+
+### Primary Engineering & Geotechnical Objectives
+* Subsurface Stratigraphy Profiling: Delineate alluvium strata, identify compressible soft organic clay/silt layers, and map bedrock depth.
+
+Foundation Bearing Capacity Assessment: Determine in-situ shear strength, cohesion, and internal friction angles required to design stable embankments, concrete pump stations, and stone dikes.
+
+Seepage & Settlement Modeling: Obtain soil samples for laboratory testing to calculate consolidation settlement (C 
+c
+​
+ ), compaction density, and hydraulic permeability (k).
+
+Typical Drilling & Testing Specifications
+Drilling Methodology: Hollow-stem auger (HSA), mud-rotary drilling, or rock coring (NQ/HQ wireline barrels) deployed from truck rigs or marine spud barges.
+
+Standard Penetration Testing (SPT): Conducted per ASTM D1586 at continuous 2.5- to 5.0-ft intervals, recording blow counts (N-values) with standard 140-lb split-spoon hammers.
+
+Thin-Walled Shelby Tube Sampling: Undisturbed cohesive soil samples collected per ASTM D1587 for triaxial shear and consolidation testing.
+
+Field Logging & Data Delivery
+Standard Boring Logs: Field logs classify all soil horizons according to the Unified Soil Classification System (USCS) (e.g., CH, CL, ML, SP, SM).
+
+Grouting & Abandonment: All holes tremie-grouted from the bottom to the ground surface with high-solids bentonite slurry per state well abandonment regulations.
+
+Quality Control & Long-Term Data Archiving
+Enterprise GIS Integration: All borehole logs digitized and georeferenced within the USACE MVR Geoportal database, preserving geotechnical baseline archives for future construction and maintenance.
+
+
+## Definition
+A borehole point represents the location of a shaft drilled, driven, or dug into the earth for the purpose of subsurface exploration, sampling, or testing (e.g., geotechnical, environmental, or hydrogeologic investigations).
+
+## Purpose
+Borehole points are used to document the location and basic characteristics of subsurface investigations that support planning, design, construction, and performance evaluations of restoration features. They provide reference for logs, laboratory results, and groundwater or soil data that inform foundation design, material suitability, and risk assessment.
+
+## Applicability
+Borehole points are applicable wherever subsurface information is collected within Upper Mississippi River System (UMRS) restoration project areas, including investigations for levees, structures, habitat features, borrow areas, disposal sites, and other engineered features. They provide a consistent spatial reference for integrating subsurface data with restoration planning and design. (UMRR Design Handbook, 2012)
+
+## Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+## BoreholePoint
+(point) – A shaft drilled, driven or dug into the earth for the purpose of subsurface exploration.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attributes</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Design</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>BoringMethod</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Date</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>BoreholeDepthFT</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>GroundElevation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Station</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+> **Note:** Final coded value table for Type is to be defined (Needs Table).
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+> **Note:** Final coded value table for SubType is to be defined (Needs Table).
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by  a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other, note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+### BoringMethod
+Method used to advance the borehole for subsurface exploration.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hollow-stem Auger</td>
+      <td>Borehole advanced using hollow-stem augers.</td>
+    </tr>
+    <tr>
+      <td>Solid-stem Auger</td>
+      <td>Borehole advanced using solid-stem augers.</td>
+    </tr>
+    <tr>
+      <td>Rotary Wash</td>
+      <td>Borehole advanced using rotary drilling with fluid circulation.</td>
+    </tr>
+    <tr>
+      <td>Rotary Core</td>
+      <td>Borehole advanced using rotary coring methods.</td>
+    </tr>
+    <tr>
+      <td>Direct Push</td>
+      <td>Borehole created using direct-push/probing equipment.</td>
+    </tr>
+    <tr>
+      <td>Hand Auger</td>
+      <td>Shallow boring advanced manually using hand augers.</td>
+    </tr>
+    <tr>
+      <td>Test Pit / Excavation</td>
+      <td>Subsurface exploration completed by excavation rather than drilling.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other boring method; describe in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Boring method not recorded.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Date
+The date the boring was performed or completed.
+
+### BoreholeDepthFT
+Total depth of the borehole in feet, measured from ground surface to the bottom of the exploration.
+
+### GroundElevation
+Ground elevation at the boring site, referenced to the vertical datum specified in RestorFeatVdatum.
+
+### Station
+Stationing of the feature, typically referenced to a project baseline or alignment (e.g., 10+50).
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., boring logs, photographs, lab reports, as-built drawings) documenting the borehole.

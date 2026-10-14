@@ -1,0 +1,26 @@
+---
+title: "Restoration Support Features"
+format: html
+---
+
+
+
+## Purpose
+Restoration Support Features are a topical group of feature classes used to represent, at various phases, engineering features constructed or implemented to directly meet the goals and objectives of programs and the projects they support.
+
+## Notes
+Data Sources - If a project has been constructed, CAD drawings or As-Built drawings should be used to guide feature digitizing. If a project is in the planning stages, the schema can be used to record potential features and track which planning alternatives they participate in. Elevation data should be attached to geometries as specified in this document.
+
+These feature classes are stored in the MVR UMRR Oracle database to ensure that authoritative data is available to all. See these reference guides to access the oracle database for editing features.
+
+## Restoration Support Features
+* DredgingPlacement (polygon) - The extent of the area covered by dredged material.
+* BoreholePoint (point) – A shaft drilled, driven or dug into the earth for the purpose of subsurface exploration.
+* ElectricalUtilityNode (point) – A subdivision of an electrical distribution network, particularly an asset that participates in the transmission of electricity but is not a line. For example, a transformer, fuse, generator, meter, or switch.
+* ElectricalUtilitySegment (line) – A subdivision of an electrical distribution network, particularly a line for the transmission of electricity.
+* FeatureStationing (point) – Reference points, generally in feet, that allow identification of specific locations on engineered structures.
+* PavementSection (polygon) – A pavement section is a portion of a pavement branch that differs in some aspect from other sections such that further segmentation is required to uniquely identify that section. For example, if the only difference in a road is the pavement material type – concrete for part of the road and asphalt for the remainder of the road – that road branch has two sections.
+* RoadSegment (line) – A portion of a road with similar characteristics such as the number of lanes or surface type.
+* Sign (point) – A structure that conveys directional, warning or other information.
+* WaterUtilityNode (point) – A subdivision of a water distribution network, particularly an asset that participates in the transmission of water but that is not a pipeline. For example, a pump, valve or fitting.
+* WaterUtilitySegment (line) – A subdivision of a wastewater network, particularly a pipeline for the transport of stormwater, sewage or industrial waste between the source, holding facilities, and/or treatment facilities.

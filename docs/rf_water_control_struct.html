@@ -1,0 +1,2204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>19&nbsp; Water Control Structure – UMRS Restoration Features</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./rf_well.html" rel="next">
+<link href="./rf_river_flow_struct_ln.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-d89583f96eb081ebb470fbdadb779a08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-1b65013b8b4bad335ef82791a5ebe532.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d89583f96eb081ebb470fbdadb779a08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./features.html">Restoration Features</a></li><li class="breadcrumb-item"><a href="./rf_water_control_struct.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Water Control Structure</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">UMRS Restoration Features</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/UMRS/Restoration-Features" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./casestudies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Case Studies</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Restoration Features Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Restoration Features</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./features.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Restoration Features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_dredging_event.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dredging Event</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_embankment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Embankment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_embankment_cntrln.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Embankment Centerline</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_fish_struct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Fish Structure</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_flora_plant_seed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Flora Planting Seeding</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_flowchannel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Flow Channel</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_island_ln.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Island Centerline</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_island.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Island</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_mosit_soli_mu.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Moist Soil Management Unit</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_notch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Notch</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_pump_station.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Pump Station</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_revetment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Revetment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_river_flow_struct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">River Flow Structure</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_river_flow_struct_ln.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">River Flow Structure Centerline</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_water_control_struct.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Water Control Structure</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_well.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Well</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_wetland.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Wetland</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Restoration Support Features</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./features_support.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Restoration Support Features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rsf_dredge_placement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Dredging Placement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rsf_borehole_pts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Borehole Points</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rsf_elec_util_node.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Electrical Utility Node</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rsf_elec_util_seg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Electrical Utility Segment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rsf_feat_station.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Feature Stationing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rsf_pavement_sect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Pavement Section</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rsf_road_seg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Road Segment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rsf_sign.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Sign</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rsf_water_util_node.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Water Utility Node</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rsf_water_util_seg.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Water Utility Segment</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Restoration Feature Crosswalk</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_cross_x_nesp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Restoration Features Crosswalk to Navigation and Ecosystem Restoration Program Features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rf_cross_x_design_hb.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Restoration Features Crosswalk to Environmental Design Handbook Chapters</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#spatial-geometric-definition" id="toc-spatial-geometric-definition" class="nav-link active" data-scroll-target="#spatial-geometric-definition">Spatial &amp; Geometric Definition</a>
+  <ul class="collapse">
+  <li><a href="#primary-restoration-engineering-objectives" id="toc-primary-restoration-engineering-objectives" class="nav-link" data-scroll-target="#primary-restoration-engineering-objectives">Primary Restoration &amp; Engineering Objectives</a></li>
+  <li><a href="#typical-structural-hydraulic-engineering-criteria" id="toc-typical-structural-hydraulic-engineering-criteria" class="nav-link" data-scroll-target="#typical-structural-hydraulic-engineering-criteria">Typical Structural &amp; Hydraulic Engineering Criteria</a></li>
+  <li><a href="#construction-implementation-methodology" id="toc-construction-implementation-methodology" class="nav-link" data-scroll-target="#construction-implementation-methodology">Construction &amp; Implementation Methodology</a></li>
+  <li><a href="#quality-control-inspection-long-term-maintenance" id="toc-quality-control-inspection-long-term-maintenance" class="nav-link" data-scroll-target="#quality-control-inspection-long-term-maintenance">Quality Control, Inspection &amp; Long-Term Maintenance</a></li>
+  </ul></li>
+  <li><a href="#spatial-features-attributes" id="toc-spatial-features-attributes" class="nav-link" data-scroll-target="#spatial-features-attributes">Spatial Features Attributes</a>
+  <ul class="collapse">
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#applicability" id="toc-applicability" class="nav-link" data-scroll-target="#applicability">Applicability</a></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  <li><a href="#watercontrolstructure" id="toc-watercontrolstructure" class="nav-link" data-scroll-target="#watercontrolstructure">WaterControlStructure</a></li>
+  </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><img src="images/watercontrolstructure.jpg" class="img-fluid" style="width:75.0%"></a></li>
+  <li><a href="#feature-attribute-criteria" id="toc-feature-attribute-criteria" class="nav-link" data-scroll-target="#feature-attribute-criteria">Feature Attribute Criteria</a></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters">Parameters</a>
+  <ul class="collapse">
+  <li><a href="#program_uid" id="toc-program_uid" class="nav-link" data-scroll-target="#program_uid">Program_UID</a></li>
+  <li><a href="#project_id-alias-project_id" id="toc-project_id-alias-project_id" class="nav-link" data-scroll-target="#project_id-alias-project_id">Project_ID (alias: PROJECT_ID)</a></li>
+  <li><a href="#type-alias" id="toc-type-alias" class="nav-link" data-scroll-target="#type-alias">Type (alias)</a></li>
+  <li><a href="#subtype-alias-subtype" id="toc-subtype-alias-subtype" class="nav-link" data-scroll-target="#subtype-alias-subtype">SubType (alias: Subtype)</a></li>
+  <li><a href="#restorfeatstatus" id="toc-restorfeatstatus" class="nav-link" data-scroll-target="#restorfeatstatus">RestorFeatStatus</a></li>
+  <li><a href="#sdsfeaturename" id="toc-sdsfeaturename" class="nav-link" data-scroll-target="#sdsfeaturename">sdsFeatureName</a></li>
+  <li><a href="#sdsfeaturedescription" id="toc-sdsfeaturedescription" class="nav-link" data-scroll-target="#sdsfeaturedescription">sdsFeatureDescription</a></li>
+  <li><a href="#restorfeatvdatum" id="toc-restorfeatvdatum" class="nav-link" data-scroll-target="#restorfeatvdatum">RestorFeatVdatum</a></li>
+  <li><a href="#controlmethod" id="toc-controlmethod" class="nav-link" data-scroll-target="#controlmethod">ControlMethod</a></li>
+  <li><a href="#structurecapacitycfs" id="toc-structurecapacitycfs" class="nav-link" data-scroll-target="#structurecapacitycfs">StructureCapacityCFS</a></li>
+  <li><a href="#lengthft" id="toc-lengthft" class="nav-link" data-scroll-target="#lengthft">LengthFT</a></li>
+  <li><a href="#diameterin" id="toc-diameterin" class="nav-link" data-scroll-target="#diameterin">DiameterIN</a></li>
+  <li><a href="#structurematerial" id="toc-structurematerial" class="nav-link" data-scroll-target="#structurematerial">StructureMaterial</a></li>
+  <li><a href="#inletinvertelevation" id="toc-inletinvertelevation" class="nav-link" data-scroll-target="#inletinvertelevation">InletInvertElevation</a></li>
+  <li><a href="#outletinvertelevation" id="toc-outletinvertelevation" class="nav-link" data-scroll-target="#outletinvertelevation">OutletInvertElevation</a></li>
+  <li><a href="#barrelnumber" id="toc-barrelnumber" class="nav-link" data-scroll-target="#barrelnumber">BarrelNumber</a></li>
+  <li><a href="#operationtype" id="toc-operationtype" class="nav-link" data-scroll-target="#operationtype">OperationType</a></li>
+  <li><a href="#structuretype" id="toc-structuretype" class="nav-link" data-scroll-target="#structuretype">StructureType</a></li>
+  <li><a href="#bottomelevation" id="toc-bottomelevation" class="nav-link" data-scroll-target="#bottomelevation">BottomElevation</a></li>
+  <li><a href="#width" id="toc-width" class="nav-link" data-scroll-target="#width">Width</a></li>
+  <li><a href="#height" id="toc-height" class="nav-link" data-scroll-target="#height">Height</a></li>
+  <li><a href="#station" id="toc-station" class="nav-link" data-scroll-target="#station">Station</a></li>
+  <li><a href="#sdsmetadataid" id="toc-sdsmetadataid" class="nav-link" data-scroll-target="#sdsmetadataid">sdsMetaDataID</a></li>
+  <li><a href="#restorfeatidpk" id="toc-restorfeatidpk" class="nav-link" data-scroll-target="#restorfeatidpk">RestorFeatIDPK</a></li>
+  <li><a href="#sdsid" id="toc-sdsid" class="nav-link" data-scroll-target="#sdsid">sdsID</a></li>
+  <li><a href="#mediaidfk" id="toc-mediaidfk" class="nav-link" data-scroll-target="#mediaidfk">mediaIDFK</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./features.html">Restoration Features</a></li><li class="breadcrumb-item"><a href="./rf_water_control_struct.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Water Control Structure</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Water Control Structure</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="spatial-geometric-definition" class="level2">
+<h2 class="anchored" data-anchor-id="spatial-geometric-definition">Spatial &amp; Geometric Definition</h2>
+<ul>
+<li><p>Geometry Type: Point or Polygon (Water_Control_Structure_Location).</p></li>
+<li><p>Spatial Delineation: Footprint encompassing reinforced concrete headwalls, drop inlets, culvert barrels, slide gates, stoplog bays, and energy dissipation aprons.</p></li>
+<li><p>Structural Typology: Gravity flow stoplog structures, flap-gated culverts, screw-jack sluice gates, and radial gates.</p></li>
+</ul>
+<section id="primary-restoration-engineering-objectives" class="level3">
+<h3 class="anchored" data-anchor-id="primary-restoration-engineering-objectives">Primary Restoration &amp; Engineering Objectives</h3>
+<ul>
+<li><p>Water Surface Regulation: Provide bi-directional water-level control across moist soil cells, backwater lakes, and floodplain basins.</p></li>
+<li><p>Bi-directional Flow Management: Retain managed pools during low river stages, permit rapid gravity drainage, and allow controlled gravity inflow during high-water pulses.</p></li>
+<li><p>Fish Passage Control: Incorporate low-velocity bays or operational settings that permit native fish ingress while blocking rough fish (common carp).</p></li>
+</ul>
+</section>
+<section id="typical-structural-hydraulic-engineering-criteria" class="level3">
+<h3 class="anchored" data-anchor-id="typical-structural-hydraulic-engineering-criteria">Typical Structural &amp; Hydraulic Engineering Criteria</h3>
+<ul>
+<li><p>Stoplog Bays: Multi-bay reinforced concrete structures (4 to 6 ft bay widths) with embedded stainless steel or aluminum slide channels housing treated timber or structural aluminum stoplogs.</p></li>
+<li><p>Culvert Barrels: Heavy-duty reinforced concrete pipe (RCP) or structural aluminum/HDPE conduits (24 to 48 in diameter) passing through embankment bodies.</p></li>
+<li><p>Seepage Cutoff Collars: Minimum of two concrete anti-seep collars or bentonite cutoff rings placed around culvert barrels within the embankment core to prevent internal seepage piping.</p></li>
+<li><p>Scour Dissipation Aprons: Concrete stilling basins or Class III riprap aprons underlain by geotextile at structure outlets to absorb exit velocities (v&gt;5.0 ft/s).</p></li>
+</ul>
+</section>
+<section id="construction-implementation-methodology" class="level3">
+<h3 class="anchored" data-anchor-id="construction-implementation-methodology">Construction &amp; Implementation Methodology</h3>
+<ul>
+<li><p>Cast-in-Place Concrete Construction: Structural concrete engineered with minimum 28-day compressive strengths of f c′ ≥4,000 psi and air-entrainment (5% to 8%) for extreme freeze-thaw durability.</p></li>
+<li><p>Sheetpile Cutoff Walls: Steel sheetpile cutoff walls driven 10 to 20 ft beneath concrete aprons to prevent under-seepage and structural piping.</p></li>
+</ul>
+</section>
+<section id="quality-control-inspection-long-term-maintenance" class="level3">
+<h3 class="anchored" data-anchor-id="quality-control-inspection-long-term-maintenance">Quality Control, Inspection &amp; Long-Term Maintenance</h3>
+<ul>
+<li>Stoplog Seal Integrity: Annual inspection of stoplog rubber seals, lifting tracks, and slide gate screw-jacks. Lubrication of gear assemblies and clearing of silt accumulation within stoplog guide slots.</li>
+</ul>
+</section>
+</section>
+<section id="spatial-features-attributes" class="level2">
+<h2 class="anchored" data-anchor-id="spatial-features-attributes">Spatial Features Attributes</h2>
+<section id="definition" class="level3">
+<h3 class="anchored" data-anchor-id="definition">Definition</h3>
+<p>Water control structures are structures within a water management system that convey water, control the direction or rate of flow, maintain a desired water surface elevation, or measure water levels or flows.</p>
+</section>
+<section id="purpose" class="level3">
+<h3 class="anchored" data-anchor-id="purpose">Purpose</h3>
+<p>Water control structures are used to regulate water levels, flow rates, and distribution within managed areas such as MSMUs, backwater lakes, and wetlands. They can be used to maintain or increase water depths to create open water areas, periodically drain or flood wetlands to enhance plant germination, and provide operational flexibility to meet multiple habitat objectives (e.g., for waterfowl, shorebirds, wading birds, reptiles, amphibians, and fisheries).</p>
+</section>
+<section id="applicability" class="level3">
+<h3 class="anchored" data-anchor-id="applicability">Applicability</h3>
+<p>Water control structures are applicable wherever active water level or flow management is required in Upper Mississippi River System (UMRS) restoration projects. They are commonly used to manage wetlands, backwaters, and managed floodplain units, and are integral components of water level management strategies implemented under HREP/UMRR projects. (UMRR Design Handbook, 2012)</p>
+</section>
+<section id="notes" class="level3">
+<h3 class="anchored" data-anchor-id="notes">Notes</h3>
+<p>Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.</p>
+<p>Attribute criteria for each field includes the following:</p>
+<ul>
+<li>Attribute Status – defines whether the field requires a value or if it is optional based on available information.</li>
+<li>Phases – indicates the earliest time in the project lifecycle values for this attribute are available.</li>
+<li>Digitizing requirements – indicates when the field value should be entered in the attribute table.</li>
+</ul>
+<p>Geometry Note: No Z values are needed for this feature.</p>
+</section>
+<section id="watercontrolstructure" class="level3">
+<h3 class="anchored" data-anchor-id="watercontrolstructure">WaterControlStructure</h3>
+<p>(point) – A structure designed to control the flow of water from the interior of an embankment to the waterside or from the waterside to the interior.</p>
+</section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"><img src="images/watercontrolstructure.jpg" class="img-fluid" style="width:75.0%"></h2>
+</section>
+<section id="feature-attribute-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="feature-attribute-criteria">Feature Attribute Criteria</h2>
+<table class="table-grid">
+<thead>
+<tr>
+<th>
+#
+</th>
+<th>
+Attribute
+</th>
+<th>
+Attribute Status
+</th>
+<th>
+Phase
+</th>
+<th>
+Digitizing Requirements
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+1
+</td>
+<td>
+Program_UID
+</td>
+<td>
+Required
+</td>
+<td>
+Feasibility
+</td>
+<td>
+At feature creation
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+PROJECT_ID (Alias)
+</td>
+<td>
+Required
+</td>
+<td>
+Feasibility
+</td>
+<td>
+At feature creation
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+Type (Alias)
+</td>
+<td>
+Required
+</td>
+<td>
+Feasibility
+</td>
+<td>
+At feature creation
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+Subtype (Alias)
+</td>
+<td>
+Required
+</td>
+<td>
+Feasibility
+</td>
+<td>
+At feature creation
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+RestorFeatStatus
+</td>
+<td>
+Required
+</td>
+<td>
+Feasibility
+</td>
+<td>
+At feature creation
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+sdsFeatureName
+</td>
+<td>
+Optional
+</td>
+<td>
+Design
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+sdsFeatureDescription
+</td>
+<td>
+Optional
+</td>
+<td>
+Design
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+RestorFeatVdatum
+</td>
+<td>
+Optional
+</td>
+<td>
+Design
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+ControlMethod
+</td>
+<td>
+Optional
+</td>
+<td>
+Design
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+StructureCapacityCFS
+</td>
+<td>
+Optional
+</td>
+<td>
+Design
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+LengthFT
+</td>
+<td>
+Optional
+</td>
+<td>
+Design
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+DiameterIN
+</td>
+<td>
+Optional
+</td>
+<td>
+Design
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+StructureMaterial
+</td>
+<td>
+Optional
+</td>
+<td>
+Design
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+InletInvertElevation
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+OutletInvertElevation
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+BarrelNumber
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+OperationType
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+StructureType
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+BottomElevation
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Width
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+Height
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+Station
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+sdsMetaDataID
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+RestorFeatIDPK
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+sdsID
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+mediaIDFK
+</td>
+<td>
+Optional
+</td>
+<td>
+Construction
+</td>
+<td>
+As required and available
+</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="parameters" class="level2">
+<h2 class="anchored" data-anchor-id="parameters">Parameters</h2>
+<section id="program_uid" class="level3">
+<h3 class="anchored" data-anchor-id="program_uid">Program_UID</h3>
+<p>Designate program NESP or UMRR.</p>
+</section>
+<section id="project_id-alias-project_id" class="level3">
+<h3 class="anchored" data-anchor-id="project_id-alias-project_id">Project_ID (alias: PROJECT_ID)</h3>
+<p>Foreign key to the unique NESP/UMRR project ID.</p>
+</section>
+<section id="type-alias" class="level3">
+<h3 class="anchored" data-anchor-id="type-alias">Type (alias)</h3>
+<p>A broad classification used to group NESP/UMRR restoration features into categories of similar function.</p>
+<table class="table-grid">
+<thead>
+<tr>
+<th>
+Value
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Water Level Management
+</td>
+<td>
+Measures taken to imitate natural low flow river conditions with the goal of improving wetland habitats.
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="subtype-alias-subtype" class="level3">
+<h3 class="anchored" data-anchor-id="subtype-alias-subtype">SubType (alias: Subtype)</h3>
+<p>A classification used to group NESP/UMRR restoration features into specific design feature categories.</p>
+<table class="table-grid">
+<thead>
+<tr>
+<th>
+Value
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Gravity Drain
+</td>
+<td>
+Gravity drain feature consisting of a discharge pipe and an opening/closing mechanism, used to introduce or remove water from a MSMU or backwater lake.
+</td>
+</tr>
+<tr>
+<td>
+Inlet Structure
+</td>
+<td>
+Large structure, generally concrete, used to allow large amounts of water into a MSMU or backwater area.
+</td>
+</tr>
+<tr>
+<td>
+Outlet Structure
+</td>
+<td>
+Large structure, generally concrete, used to allow large amounts of water out of a MSMU or backwater area.
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="restorfeatstatus" class="level3">
+<h3 class="anchored" data-anchor-id="restorfeatstatus">RestorFeatStatus</h3>
+<p>A description of the status of the individual restoration. It also includes the party responsible for the individual feature.</p>
+<table class="table-grid">
+<thead>
+<tr>
+<th>
+Value
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+USACE Planned
+</td>
+<td>
+Feature is in a USACE planning stage.
+</td>
+</tr>
+<tr>
+<td>
+USACE Built
+</td>
+<td>
+Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.
+</td>
+</tr>
+<tr>
+<td>
+USACE Enhanced
+</td>
+<td>
+The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.
+</td>
+</tr>
+<tr>
+<td>
+USACE Repaired
+</td>
+<td>
+An existing feature that was not built by USACE has been directly improved or repaired.
+</td>
+</tr>
+<tr>
+<td>
+Other Planned
+</td>
+<td>
+A feature that is planned by another organization or government agency.
+</td>
+</tr>
+<tr>
+<td>
+Other Built
+</td>
+<td>
+Feature has been built by another organization or government agency and is an integral part of the UMRR project.
+</td>
+</tr>
+<tr>
+<td>
+Other Enhanced
+</td>
+<td>
+The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.
+</td>
+</tr>
+<tr>
+<td>
+Other Repaired
+</td>
+<td>
+An existing feature that has been directly improved or repaired by another organization or government agency.
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sdsfeaturename" class="level3">
+<h3 class="anchored" data-anchor-id="sdsfeaturename">sdsFeatureName</h3>
+<p>The common name of the feature.</p>
+</section>
+<section id="sdsfeaturedescription" class="level3">
+<h3 class="anchored" data-anchor-id="sdsfeaturedescription">sdsFeatureDescription</h3>
+<p>A narrative describing the feature.</p>
+</section>
+<section id="restorfeatvdatum" class="level3">
+<h3 class="anchored" data-anchor-id="restorfeatvdatum">RestorFeatVdatum</h3>
+<p>Vertical datum of elevations recorded in the attribute table or used as feature z values.</p>
+<table class="table-grid">
+<thead>
+<tr>
+<th>
+Value
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+MSL 1912
+</td>
+<td>
+Mean Sea Level of 1912
+</td>
+</tr>
+<tr>
+<td>
+NGVD 1929
+</td>
+<td>
+National Geodetic Vertical Datum of 1929
+</td>
+</tr>
+<tr>
+<td>
+NAVD 1988
+</td>
+<td>
+North American Vertical Datum of 1988
+</td>
+</tr>
+<tr>
+<td>
+Other
+</td>
+<td>
+Other, note datum in sdsFeatureDescription
+</td>
+</tr>
+<tr>
+<td>
+Unknown
+</td>
+<td>
+Unknown vertical datum
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="controlmethod" class="level3">
+<h3 class="anchored" data-anchor-id="controlmethod">ControlMethod</h3>
+<p>The type of flow control used.</p>
+<table class="table-grid">
+<thead>
+<tr>
+<th>
+Value
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Flap Gate
+</td>
+<td>
+Top-hinged gate, can be manually or automatically operated.
+</td>
+</tr>
+<tr>
+<td>
+Gate Wells
+</td>
+<td>
+Concrete enclosure used to house a manually operated drain closure valve or another device.
+</td>
+</tr>
+<tr>
+<td>
+Sluice Gate
+</td>
+<td>
+Gate lowered into place, generally using a threaded stem system, operated manually or automatically.
+</td>
+</tr>
+<tr>
+<td>
+Flap gate and sluice gate
+</td>
+<td>
+Combination flap and sluice gate.
+</td>
+</tr>
+<tr>
+<td>
+Stoplog
+</td>
+<td>
+Stoplog structure.
+</td>
+</tr>
+<tr>
+<td>
+Weir Gate
+</td>
+<td>
+Gate that slides down to allow water to flow over the top of the gate.
+</td>
+</tr>
+<tr>
+<td>
+Other
+</td>
+<td>
+Other gate type; specify in sdsFeatureDescription.
+</td>
+</tr>
+<tr>
+<td>
+NA
+</td>
+<td>
+Not applicable.
+</td>
+</tr>
+<tr>
+<td>
+Unknown
+</td>
+<td>
+Control method unknown.
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="structurecapacitycfs" class="level3">
+<h3 class="anchored" data-anchor-id="structurecapacitycfs">StructureCapacityCFS</h3>
+<p>Design capacity of the structure in cubic feet per second (CFS).</p>
+</section>
+<section id="lengthft" class="level3">
+<h3 class="anchored" data-anchor-id="lengthft">LengthFT</h3>
+<p>Length of the gravity drain or pipe in feet.</p>
+</section>
+<section id="diameterin" class="level3">
+<h3 class="anchored" data-anchor-id="diameterin">DiameterIN</h3>
+<p>Diameter of the drainpipe in inches.</p>
+</section>
+<section id="structurematerial" class="level3">
+<h3 class="anchored" data-anchor-id="structurematerial">StructureMaterial</h3>
+<p>Material the structure (typically barrel/pipe) is made of.</p>
+<table class="table-grid">
+<thead>
+<tr>
+<th>
+Value
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Aluminum
+</td>
+<td>
+Aluminum pipe.
+</td>
+</tr>
+<tr>
+<td>
+Concrete
+</td>
+<td>
+Concrete pipe.
+</td>
+</tr>
+<tr>
+<td>
+Fiberglass
+</td>
+<td>
+Fiberglass pipe.
+</td>
+</tr>
+<tr>
+<td>
+Steel
+</td>
+<td>
+Steel pipe.
+</td>
+</tr>
+<tr>
+<td>
+PVC
+</td>
+<td>
+Polyvinyl chloride pipe.
+</td>
+</tr>
+<tr>
+<td>
+Corrugated metal
+</td>
+<td>
+Corrugated metal pipe.
+</td>
+</tr>
+<tr>
+<td>
+Copper
+</td>
+<td>
+Copper pipe.
+</td>
+</tr>
+<tr>
+<td>
+HDPE
+</td>
+<td>
+High density polyethylene pipe.
+</td>
+</tr>
+<tr>
+<td>
+Other
+</td>
+<td>
+Other material; specify in sdsFeatureDescription.
+</td>
+</tr>
+<tr>
+<td>
+NA
+</td>
+<td>
+Not applicable.
+</td>
+</tr>
+<tr>
+<td>
+Unknown
+</td>
+<td>
+Material unknown.
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="inletinvertelevation" class="level3">
+<h3 class="anchored" data-anchor-id="inletinvertelevation">InletInvertElevation</h3>
+<p>Elevation of the inlet invert (inside bottom) of the structure, referenced to RestorFeatVdatum.</p>
+</section>
+<section id="outletinvertelevation" class="level3">
+<h3 class="anchored" data-anchor-id="outletinvertelevation">OutletInvertElevation</h3>
+<p>Elevation of the outlet invert (inside bottom) of the structure, referenced to RestorFeatVdatum.</p>
+</section>
+<section id="barrelnumber" class="level3">
+<h3 class="anchored" data-anchor-id="barrelnumber">BarrelNumber</h3>
+<p>Number of barrels, if the gravity drain is a multi-barrel drain.</p>
+</section>
+<section id="operationtype" class="level3">
+<h3 class="anchored" data-anchor-id="operationtype">OperationType</h3>
+<p>Type of operation required for gate closing or opening.</p>
+<table class="table-grid">
+<thead>
+<tr>
+<th>
+Value
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Manual
+</td>
+<td>
+Manual operation required.
+</td>
+</tr>
+<tr>
+<td>
+Automatic
+</td>
+<td>
+Automatic operation required.
+</td>
+</tr>
+<tr>
+<td>
+Both
+</td>
+<td>
+Manual and automatic operation can be used.
+</td>
+</tr>
+<tr>
+<td>
+Unknown
+</td>
+<td>
+Operation unknown.
+</td>
+</tr>
+<tr>
+<td>
+NA
+</td>
+<td>
+Not applicable.
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="structuretype" class="level3">
+<h3 class="anchored" data-anchor-id="structuretype">StructureType</h3>
+<p>Type of water control structure.</p>
+<table class="table-grid">
+<thead>
+<tr>
+<th>
+Value
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Pipe
+</td>
+<td>
+Pipe-type structure.
+</td>
+</tr>
+<tr>
+<td>
+Gate
+</td>
+<td>
+Gate structure (non-pipe).
+</td>
+</tr>
+<tr>
+<td>
+Box Culvert
+</td>
+<td>
+Box culvert (non-pipe).
+</td>
+</tr>
+<tr>
+<td>
+Other
+</td>
+<td>
+Other structure type; specify in sdsFeatureDescription.
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bottomelevation" class="level3">
+<h3 class="anchored" data-anchor-id="bottomelevation">BottomElevation</h3>
+<p>Bottom elevation of non-pipe type structures, referenced to RestorFeatVdatum.</p>
+</section>
+<section id="width" class="level3">
+<h3 class="anchored" data-anchor-id="width">Width</h3>
+<p>Width of non-pipe type structures in feet.</p>
+</section>
+<section id="height" class="level3">
+<h3 class="anchored" data-anchor-id="height">Height</h3>
+<p>Height of non-pipe type structures in feet.</p>
+</section>
+<section id="station" class="level3">
+<h3 class="anchored" data-anchor-id="station">Station</h3>
+<p>Stationing of the feature, typically referenced to a project baseline or alignment (e.g., 10+00).</p>
+</section>
+<section id="sdsmetadataid" class="level3">
+<h3 class="anchored" data-anchor-id="sdsmetadataid">sdsMetaDataID</h3>
+<p>References attached metadata.</p>
+</section>
+<section id="restorfeatidpk" class="level3">
+<h3 class="anchored" data-anchor-id="restorfeatidpk">RestorFeatIDPK</h3>
+<p>Primary key used to uniquely identify the restoration feature record.</p>
+</section>
+<section id="sdsid" class="level3">
+<h3 class="anchored" data-anchor-id="sdsid">sdsID</h3>
+<p>Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.</p>
+</section>
+<section id="mediaidfk" class="level3">
+<h3 class="anchored" data-anchor-id="mediaidfk">mediaIDFK</h3>
+<p>Foreign key used to reference associated media (e.g., structure details, as-built drawings, photographs) documenting the water control structure.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./rf_river_flow_struct_ln.html" class="pagination-link" aria-label="River Flow Structure Centerline">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">River Flow Structure Centerline</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./rf_well.html" class="pagination-link" aria-label="Well">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Well</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Made with love by USACE</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

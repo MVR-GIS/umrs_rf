@@ -1,0 +1,408 @@
+---
+title: "Dredging Event"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+## Spatial & Geometric Definition
+
+* Geometry Type: Polygon (Dredge_Event_Area).
+
+* Spatial Delineation: Extents of authorized aquatic cut prisms within backwater lakes, secondary chutes, side channels, access cuts, and sediment deflection basins.
+
+* Vertical Bounds: Existing hydrographic bathymetric profile down to engineered project design grade, including allowable design overdepth tolerance (+0.5 to +1.0 ft).
+
+* Primary Restoration & Engineering Objectives
+Overwintering Fish Refugia: Deepen degraded shallow backwaters to restore minimum safe thermal depths (≥8.0 to 10.0 ft) beneath winter river ice cover.
+
+* Riverine Velocity Dissipation: Provide low-velocity resting basins (<0.05 ft/s) protected from cold, turbulent main-stem drafts.
+
+* Aquatic Habitat Longevity: Calculate design dredge depths using long-term historic bathymetric sedimentation rates to guarantee a minimum 25- to 50-year biological lifespan before re-shoaling.
+
+### Typical Cross-Sections, Dimensions & Sizing Criteria
+* Bottom Widths: Primary fish cuts span 50 to 150 ft; deep winter holes span 100 to 300 ft.
+
+* Side Slopes: Typically specified at 1V:3H to 1V:5H in unconsolidated alluvial sands, and 1V:6H to 1V:10H in soft cohesive lacustrine silts.
+
+* Target Water Depths: Maintained at 8.0 to 12.0 ft below flat low navigation pool elevation.
+
+### Construction & Implementation Methodology
+* Hydraulic Cutterhead Dredging: Slurry pumping (12 to 24 in pipelines) utilized when material is targeted for long-distance transport into confined disposal facilities (CDFs) or island containment berms.
+
+* Mechanical Clamshell / Excavator Dredging: Barge-mounted long-reach excavators and scows utilized when sediments are coarse sand or placed immediately along adjacent island cores.
+
+* Turbidity Controls: Silt curtains, hydraulic velocity dissipators, and continuous down-drift total suspended solids (TSS) and dissolved oxygen (DO) monitoring.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Pre- and Post-Dredge Hydrographic Surveys: Multi-beam and dual-frequency single-beam acoustic sonar runs tied to USACE River Gages and NAVD88 vertical datum.
+
+* Long-Term Monitoring: Bathymetric transects established at 200-ft intervals, surveyed at 1-, 3-, 5-, and 10-year intervals post-construction to quantify sediment accretion rates.
+
+## Spatial Feature Attribute
+### Definition
+Backwater dredging typically consists of dredging channels with fingers (dredged channels that extend out away from the main dredge cut). The depth and size (length and width) of the dredge cut depends on several site specific factors.
+
+### Purpose
+  Sediment is dredged to create depth diversity in the backwaters can be used to enhance aquatic areas with islands or terrestrial areas with increase topographic diversity, which promotes the growth of mast trees.
+
+### Applicability
+Many Upper Mississippi River System (UMRS) backwaters have been degraded by excessive amounts of sediment emanating from the basin, tributaries, and mainstem sources. This degradation is in the form of loss of depth, poor sediment quality, poor water quality, and sediment resuspension that blocks light required by aquatic plants. Streambank erosion throughout the basin is another important source of sediment that fills the backwaters. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute as available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: Polygon nodes should have z values; elevations should be taken from as-built survey or design documents.
+
+### DredgingEvent
+(polygon) – The extent of the area subject to dredging action. (area of material removal)
+
+![](images/dredging.jpg){width=75%}
+---
+
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>DredgeMethod</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>VolumeCY</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>CutWidthFT</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>CutLengtFT</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>CutDepthFT</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dredging</td>
+      <td>Area subject to dredging action.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Channel Dredging</td>
+      <td>Removal of sediment to create channels to redirect flow or provide equipment access to construction areas</td>
+    </tr>
+    <tr>
+      <td>Deep hole dredging</td>
+      <td>Removal of sediment, using a variety of methods, to create backwater lakes generally to increase fish habitat</td>
+    </tr>
+    <tr>
+      <td>Sediment basin dredging</td>
+      <td>Removal of sediment from or to create sediment basins</td>
+    </tr>
+    <tr>
+      <td>Geo-textile fill dredging</td>
+      <td>Removal of sediment to fill geo-textile tubes</td>
+    </tr>
+    <tr>
+      <td>Borrow</td>
+      <td>Removal of sediment from an area to be used for a specific purpose in another area.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other, note datum in sdsFeatureDescription</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum</td>
+    </tr>
+  </tbody>
+</table>
+
+### DredgeMethod
+Method used to dredge.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mechanical</td>
+      <td>Dredge method using mechanical equipment</td>
+    </tr>
+    <tr>
+      <td>Hydraulic</td>
+      <td>Dredge method using hydraulic equipment</td>
+    </tr>
+    <tr>
+      <td>High Solids</td>
+      <td>Dredge method used specifically for filling geotextile tubes</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown</td>
+    </tr>
+  </tbody>
+</table>
+
+### VolumeCY
+Volume of material removed in cubic yards.
+
+### CutWidthFT
+Width of dredge cut.
+
+### CutLengthFT
+Length of dredge cut.
+
+### CutDepthFT
+Average depth of dredge cut.
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+References attached media.
+
+### sdsID
+References attached media.
+
+### mediaIDFK
+References attached media.
+

@@ -1,0 +1,57 @@
+---
+title: "Introduction"
+format: html
+---
+
+
+
+## What are Restoration Features?
+Restoration features are what we build.
+
+## UMRS Restoration Data Model
+
+
+### Purpose
+The restoration features are GIS feature classes designed to document the key design elements of ecosystem restoration features built on the Upper Mississippi River System (UMRS). This data model has been developed to represent the wide range of restoration practices employed on the UMRS throughout many years and be adaptable into the future. As we learn lessons about restoration, this data model has evolved along with our best practice.
+
+### Data Design Standards
+The entities in this data model represent the physical structures constructed to accomplish the restoration objectives of each project. These entities are grouped into standardized GIS "feature classes" (groups of objects of single type having a common set of attributes). This standard was adapted from the DOD SDSFIE-V (https://www.sdsfie.mil) to represent the specialized features built on the UMRS. This data model was designed to represent UMRS best practice as documented in the UMRR Design Handbook (2012, 2025).
+
+### Data Use
+* Common Terms - Provides a common lexicon of ecosystem restoration features representing current best practice to streamline communication across a diverse group of stakeholders, spread across many organizations, from many disciplinary backgrounds.
+* Cartography - Defines a standardized framework for representing a wide variety of complex spatial features on different media types (i.e., static paper maps, interactive web maps). Maps are one of the most effective communication tools to describe project benefits to the public.
+* Upward Reporting - Expressing these diverse features in a standard framework supports automated summarization to streamline routine upward reporting of project status and benefits.
+* Record Keeping - Forty years of UMRS restoration has generated a rich set of built features to monitor and learn from. This standardized framework, that can evolve with current best practice, is the best way to track our investments.
+* Whole Project Lifecycle - This standardized framework allows us to track projects throughout their entire lifecycle, from planning and feasibility, through design and construction, and through operation and maintenance.
+UMRS Restoration Data Model
+
+## Implementation
+The Army Corps of Engineers project process typically involves four main phases: pre-study initiation (community request), feasibility study, design and construction, and operation and maintenance.
+
+### Feasibility
+* The Corps conducts a detailed study to assess the problem, evaluate potential solutions, and determine project feasibility.
+* Analysis includes environmental impacts, economic benefits, and cost-benefit analysis.
+* Report is submitted to higher authorities for review and approval.
+
+### Design & Construction
+* If the project is approved, detailed design plans are developed.
+* Necessary permits are obtained.
+* Construction contracts are awarded and project is built.
+
+#### Operation and Maintenance
+Once completed, the Corps manages the project, including routine maintenance and repairs.
+
+## Current Programs Usage
+
+### UMRR
+To work within a partnership among federal and state agencies and other organizations; to construct high-performing habitat restoration, rehabilitation projects; to produce state-of-the-art knowledge through monitoring, research, and assessment; to engage other organizations to accomplish the Upper Mississippi River Restoration Program's vision.
+
+The HREP element has fostered interdisciplinary and collaborative planning for habitat restoration, preservation, and enhancement previously non-existent on any other river system in the United States.
+
+### NESP
+The Navigation and Ecosystem Sustainability Program (NESP) is a long-term, dual-purpose program that integrates navigation improvements and ecosystem restoration together to provide Upper Mississippi River System once in a generation-type positive impact.
+
+The purpose of the Navigation and Ecosystem Sustainability Program is to improve efficiency and capacity of the nationally significant Upper Mississippi River – Illinois Waterway (UMR-IWW) navigation system while protecting preserving and enhancing the structure, diversity, and function of this nationally significant ecosystem.
+
+### Notes
+Several ecosystem restoration programs are active on the UMRS at the local, state, and federal levels. This data model was designed to function as a repository of the ecosystem restoration features common within a large river floodplain system such as the UMRS, independent of jurisdiction or funding source.

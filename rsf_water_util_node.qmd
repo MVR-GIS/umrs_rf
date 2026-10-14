@@ -1,0 +1,375 @@
+---
+title: "Water Utility Node"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Point (Water_Utility_Node).
+
+* Spatial Delineation: Geographic point locations representing discrete hydraulic fixtures, fittings, and mechanical control nodes within project water delivery systems.
+
+* Component Typology: Gate valves, butterfly valves, check valves, vacuum/air-relief valves, cleanouts, hydrants, flow meters, and manifold tee-junctions.
+
+### Primary Engineering & Hydraulic Objectives
+* Pipeline Flow Isolation: Enable operators to isolate, balance, or throttle flow rates across individual pipe legs within complex multi-cell wetland delivery systems.
+
+* Surge & Vacuum Protection: Air/vacuum relief valves release entrapped air pockets during pipeline filling and introduce air during rapid draining to prevent catastrophic vacuum pipeline collapse.
+
+* Volume Flow Metering: Ultrasonic or magnetic flow meters recording pumped water volumes for water-budget accounting and regulatory reporting.
+
+### Technical & Mechanical Specifications
+* Valving Specifications: Resilient-seated wedge gate valves or high-performance rubber-lined butterfly valves rated for minimum 150 psi working pressure.
+
+* Access Vaults: Underground nodes housed inside precast reinforced concrete utility vaults equipped with aluminum diamond-plate hatch doors (H−20 traffic-rated), interior drain sumps, and access ladders.
+
+* Corrosion Protection: All valves and fittings epoxy-coated per AWWA C550, with stainless steel assembly bolts and sacrificial zinc anode bags in corrosive alluvial soils.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Valve Exercising Programs: Semi-annual operational cycling of all buried and vault-housed valves through their complete open/close travel to prevent sediment binding.
+
+## Spatial Feature Attributes
+### Definition
+Water Utility Node: Represents a point in a water distribution system, such as a valve, hydrant, or meter. A subdivision of a water distribution network, particularly an asset that participates in the transmission of water but that is not a pipeline. For example, a pump, valve or fitting.
+
+### Purpose
+Spatial Delineation: Geographic point locations representing discrete hydraulic fixtures, fittings, and mechanical control nodes within project water delivery systems.
+
+### Applicability
+Primary Engineering & Hydraulic Objectives
+•	Pipeline Flow Isolation: Enable operators to isolate, balance, or throttle flow rates across individual pipe legs within complex multi-cell wetland delivery systems.
+•	Surge & Vacuum Protection: Air/vacuum relief valves release entrapped air pockets during pipeline filling and introduce air during rapid draining to prevent catastrophic vacuum pipeline collapse.
+•	Volume Flow Metering: Ultrasonic or magnetic flow meters recording pumped water volumes for water-budget accounting and regulatory reporting.
+
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute as available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+### WaterUtilityNode
+(point) – A subdivision of a water distribution network, particularly an asset that participates in the transmission of water but that is not a pipeline. For example, a pump, valve or fitting.
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>waterNetworkSubtype</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>OperationStatus</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>realPropertySiteUniqueID</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>realPropertyNetworkUniqueID</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>realPropertyUniqueID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>propertyCodeID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>waterNodeType</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Restoration_Type</td>
+      <td>Support feature</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Water Utility</td>
+      <td>Water utility</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other, note datum in sdsFeatureDescription</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum</td>
+    </tr>
+  </tbody>
+</table>
+
+### waterNetworkSubtype
+(Need text)
+
+### OperationStatus
+(Need text)
+
+### realPropertySiteUniqueID
+(Need text)
+
+### realPropertyNetworkUniqueID
+(Need text)
+
+### realPropertyUniqueID
+(Need text)
+
+### propertyCodeID
+(Need text)
+
+### waterNodeType
+(Need text)
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+References attached media.
+
+### sdsID
+References attached media.
+
+### mediaIDFK
+References attached media.

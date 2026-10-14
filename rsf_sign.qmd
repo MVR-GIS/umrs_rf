@@ -1,0 +1,394 @@
+---
+title: "Sign"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Point (Sign_Feature_Location).
+
+* Spatial Delineation: Point location, orientation azimuth, and structural support of physical signage deployed across terrestrial paths and aquatic river navigation channels.
+
+* Functional Typology: Regulatory water safety markers, USFWS refuge sanctuary warnings, project boundary markers, and public educational interpretative kiosks.
+
+### Primary Engineering & Operational Objectives
+* Safety & Regulatory Enforcement: Mark low-head rock sills, submerged weirs, and pumping intakes to protect recreational boaters from marine hazards.
+
+* Ecological Protection Enforcement: Delineate restricted-access wildlife zones, seasonal "Slow-No Wake" corridors, and autumn migratory waterfowl resting sanctuaries.
+
+* Public Education: Display ecological maps and interpretative narratives detailing the engineering and ecological outcomes of the UMRR-EMP restoration project.
+
+### Structural & Material Specifications
+* Aquatic Piling Signs: Heavy-duty marine signs mounted on treated timber pilings or steel structural pipes driven 10 to 15 ft into the river bed, equipped with solar-powered flashing amber LED marine lanterns.
+
+* Terrestrial Posts: Breakaway galvanized steel U-channel posts or treated timber posts anchored in concrete foundations outside levee shoulder lines.
+
+* Sign Face Materials: Heavy-gauge (0.080- to 0.125-in) rust-free marine-grade aluminum sheeting faced with ASTM D4956 Type IV or Type XI High-Intensity Prismatic reflective sheeting.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Visual Audits: Biannual inspections checking for bullet damage, solar battery degradation, structural tilt, or flood-debris impact displacement.
+
+## Spatial Feature Attributes
+### Definition
+A sign is a fixed structure used to convey directional, navigational, regulatory, safety, interpretive, or other project-related information to the public or operational users. Sign: refers to any type of sign used at a project site, including regulatory signs, warning signs, and informational signs.
+
+### Purpose
+Signs are installed to clearly communicate important information such as navigation guidance, safety warnings, access restrictions, ownership or jurisdiction, and project identification. Properly placed signs support safe use of project areas, protect project features and habitat, and ensure compliance with management objectives.
+
+### Applicability
+Signs are used throughout Upper Mississippi River System (UMRS) restoration projects wherever clear, visible communication is required on the landscape or waterway. Typical locations include project access points, navigation channels, control structures, habitat management areas, and public use facilities. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+### Sign
+(point) – A structure that conveys directional, warning, regulatory, interpretive, or other information.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>signText</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>signType</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>realPropertySiteUniqueID</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>realPropertyNetworkUniqueID</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>propertyCodeID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Restoration_Type</td>
+      <td>Support feature</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sign</td>
+      <td>Sign</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other, note datum in sdsFeatureDescription</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum</td>
+    </tr>
+  </tbody>
+</table>
+
+### signText
+Full text displayed on the sign face, recorded as it appears in the field (including key abbreviations or messages needed for navigation, safety, or management).
+
+### signType
+General classification of the sign based on its primary function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Navigational</td>
+      <td>Sign providing channel alignment, hazard, regulatory, or other navigation-related information to boaters.</td>
+    </tr>
+    <tr>
+      <td>Warning / Safety</td>
+      <td>Sign warning users of hazards, restricted areas, or other safety concerns (e.g., “Danger – Keep Out”).</td>
+    </tr>
+    <tr>
+      <td>Regulatory</td>
+      <td>Sign stating rules, restrictions, or required actions (e.g., no wake, no trespassing, speed limits).</td>
+    </tr>
+    <tr>
+      <td>Informational / Interpretive</td>
+      <td>Sign providing general information, education, or interpretation about the project, resources, or facilities.</td>
+    </tr>
+    <tr>
+      <td>Identification</td>
+      <td>Sign identifying project features, structures, ownership, or facility names.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Sign type not captured by the above categories; describe in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Sign type has not been determined.</td>
+    </tr>
+  </tbody>
+</table>
+
+### realPropertySiteUniqueID
+Unique identifier linking the sign to a specific real property site or installation record in the real property inventory, when applicable.
+
+### realPropertyNetworkUniqueID
+Unique identifier linking the sign to a network-level real property or asset management record (e.g., a regional or enterprise real property system), when applicable.
+
+### propertyCodeID
+Code indicating the real property classification or category of the asset (e.g., sign, marker, or similar facility type) as defined by the managing agency’s real property coding system.
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., photographs, drawings, as-built plans) documenting the sign.

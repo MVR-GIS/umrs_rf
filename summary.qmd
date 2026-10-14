@@ -1,0 +1,44 @@
+---
+title: "Restoration Features Summary"
+format: html
+---
+### The Integrated Design of River Restoration Features
+The "2012 UMRR EMP Environmental Design Handbook" outlines a comprehensive and integrated approach to river restoration, where a diverse suite of features are designed to work together to achieve large-scale ecological uplift in the Upper Mississippi River System. The relationship between the individual restoration features and the overarching design practices is not linear but rather a complex, synergistic web. The core design practice is to view the river not as a series of isolated problems but as a complete ecosystem. Therefore, projects combine multiple features to mimic natural processes, restore habitat, and ensure the long-term resilience of the restored environment.
+
+The restoration features can be broadly understood in two categories: Primary Ecological Features and the Supporting Engineering and Infrastructure Features that enable them. The design practice involves layering these two categories to create a functional and sustainable project.
+
+1. Primary Ecological Features: The Building Blocks of Restoration
+These features are the visible, direct interventions aimed at restoring ecological structure and function. Design practices for these features focus on creating specific habitats and restoring natural river processes.
+
+- Objective: Enhancing Aquatic Habitat & Connectivity
+
+    - Features Used: Dredge Events are a cornerstone practice to restore depth in sediment-filled backwaters. This creates overwintering refugia for fish and improves flow. The design is not simply about digging a hole; it involves creating varied depths and complex shapes. To further enhance this, Fish Structures (like rock piles and log snags) are added to provide cover. Flow Channels and Notches in dikes are engineered to reintroduce vital, oxygenated water from the main channel into these restored backwaters, preventing stagnation.
+
+    - Relationship to Design: The design practice here is one of habitat layering. A single backwater dredging project is designed in concert with flow introduction and in-stream cover to create a complete, multi-faceted aquatic habitat, rather than just a deep pool.
+
+- Objective: Restoring Landforms and Floodplain Dynamics
+
+    - Features Used: Islands, often built using material from Dredge Events (a key synergy), are a primary tool. Their design is strategic: they act as barriers to reduce wind and wave erosion in backwaters, creating sheltered zones for aquatic plants to grow. The islands themselves are designed with varied topography, using Flora Planting and Seeding to establish Floodplain Forests and provide secure nesting habitat.
+
+    - Relationship to Design: The design practice is geomorphic restoration. It's not just about building an island, but about using that island as a tool to reshape the river's flow, energy, and light conditions to benefit the wider ecosystem. The island's design (shape, elevation, vegetation) is dictated by these broader goals.
+
+- Objective: Managing Riparian and Wetland Zones
+
+    - Features Used: Moist Soil Management Units (MSUs) and Wetlands are created or restored using Embankments to impound water. The key design practice is the precise management of water levels, which is accomplished using Water Control Structures, Pump Stations, and Wells. By controlling the timing and duration of flooding and drawdowns, managers can stimulate the growth of specific native plants that provide critical food for migratory waterfowl.
+
+    - Relationship to Design: This demonstrates the practice of active ecological management. The features are designed not as static elements, but as a dynamic, controllable system that allows managers to adapt to environmental conditions and meet specific ecological targets year after year.
+
+2. Supporting Engineering and Infrastructure Features: The Foundation of Success
+These features are the critical engineering components that make the primary ecological restorations possible, stable, and accessible. The design practice is to integrate these robust engineering solutions seamlessly to ensure the project's longevity and functionality.
+
+- Geotechnical and Structural Stability: A Revetment (rock armor) is designed to protect a newly built Island from eroding. The design of a massive Embankment relies entirely on data from Borehole Points to understand the soil's capacity to support the structure. Riverine Flow Structures like wing dikes are designed based on extensive hydraulic modeling to ensure they steer river currents effectively without causing unintended erosion elsewhere.
+
+- Construction and Operational Logistics: The entire system is built upon a framework of civil infrastructure. Feature Stationing, Embankment Centerlines, and Island Lines provide the precise survey control needed for construction. Road Segments and Pavement Sections are designed to provide all-weather access for heavy machinery during construction and for long-term maintenance and monitoring.
+
+- Power and Utilities: The active management of an MSU is impossible without a reliable Pump Station, which in turn depends on a network of Electrical Utility Nodes and Segments. The design practice here ensures that this critical infrastructure is itself resilient, often elevated above flood levels to maintain operational capacity during high-water events.
+
+#### Conclusion
+In summary, the relationship between restoration features and design practices is one of interdependence and synergy. The design process for a UMRR EMP project begins with a clear ecological objective, such as improving fish habitat or restoring a floodplain forest. To achieve this, a suite of primary ecological features are selected and designed as an interconnected system. Finally, this system is built upon a robust foundation of supporting engineering and infrastructure features, which are designed to ensure the primary features are constructed correctly, remain stable over their design life, and can be actively managed to maximize their ecological benefits. No single feature stands alone; its design is always considered in the context of the entire project and the broader river ecosystem.
+
+
+

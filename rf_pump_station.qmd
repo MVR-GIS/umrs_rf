@@ -1,0 +1,546 @@
+---
+title: "Pump Station"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+
+## Spatial & Geometric Definition
+* Geometry Type: Point or Polygon (Pump_Station_Structure).
+
+* Spatial Delineation: Footprint encompassing cast-in-place concrete wet-wells, intake bays, discharge manifolds, electrical control buildings, and fuel/power infrastructure.
+
+* Operational Classification: High-capacity, low-head axial-flow pumping systems.
+
+### Primary Restoration & Engineering Objectives
+* Hydrologic Independence: Allow rapid filling or complete dewatering of moist soil units and managed wetland cells regardless of ambient river flood or drought stages.
+
+* Dewatering Reliability: Drain impounded areas during spring flood stages when external river levels sit higher than the internal wetland ground elevation.
+
+* Rapid Flood Protection: Evacuate internal runoff following heavy storm events to prevent premature drown-out of maturing wetland seed crops.
+
+### Typical Mechanical & Structural Engineering Specifications
+* Pumping Capacity: Total station flow capacities range between 2,000 and 25,000 gpm (5 to 55 cfs), operating against total dynamic heads (TDH) of 6 to 18 ft.
+
+* Pump Mechanics: Vertical axial-flow or mixed-flow electric submersible or lineshaft pumps. Sized with variable frequency drives (VFD) for adjustable flow rates.
+
+* Reversible Manifold Piping: Multi-valve directional piping manifolds allowing a single pump train to draw water from the river to fill the cell, or draw from the cell to discharge out into the river.
+
+### Construction & Implementation Methodology
+* Deep Foundation Systems: Reinforced concrete substructure founded on steel H-piling or driven ductile iron piles keyed into underlying load-bearing river sands to resist uplift hydrostatic pressures.
+
+* Cofferdam Dewatering: Wet-well construction executed within sheetpile cofferdams dewatered by deep-well point systems.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Intake Screening: Trash racks equipped with automated mechanical rakes or heavy bar screens (2- to 3-in clear spacing) to prevent log and debris ingestion.
+
+* Winterization: Annual late-autumn dewatering of pump bowls, lubrication checks, and cycling of emergency backup diesel generators under full load.
+
+
+## Spatial Feature Attribute
+
+### Definition
+A pump station is a facility that pumps water between two storage areas, a storage area and a river reach, or between different river reaches. It can also be used to transfer water within the same 2D Flow Area or between different cells within the same 2D Flow Area.
+
+### Purpose
+Pump stations are used to introduce or remove water from backwater lakes, MSMUs, or other project areas using surface water (typically from a river) or groundwater. They provide controlled water level management, allowing project operators to manipulate hydrologic conditions to support habitat objectives, flood risk management, and operational needs.
+
+### Applicability
+Pumping stations are used for removal of interior drainage from areas protected by local flood protection works and for water supply. Pumping stations can and should have negligible adverse environmental impacts. They can also be used to connect pumps, lift flows from lower to higher elevations, increase pressure in gravity flow distribution systems, and improve the selection and operation of water level management facilities within restoration projects. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+### PumpStation
+(point) – The location of a pump for the purpose of pumping water from the interior of a levee or embankment.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attributes</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Design</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>NumberPumps</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>PumpConfiguration</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>PumpDrive</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>PumpType</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>MaxDesignHeadFT</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>PumpCapacityCFS</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>PumpElevation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>InvertElevation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>PumpAgeYRS</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>DateBuilt</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Station</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Water Level Management</td>
+      <td>Measures taken to imitate natural low flow river conditions with the goal of improving wetland habitats.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pump Station</td>
+      <td>Water pump infrastructure, which may include a pad, pump(s), and pump enclosure, used to introduce or remove water from a MSMU or backwater lake.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912.</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929.</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other; note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+### NumberPumps
+Number of pumps of a specific type in the pump station.
+
+### PumpConfiguration
+Pump configuration, generally referring to a horizontally or vertically oriented pump. The area available for pump placement usually dictates configuration.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Horizontal</td>
+      <td>Horizontal pump configuration.</td>
+    </tr>
+    <tr>
+      <td>Vertical Line Shaft</td>
+      <td>Vertical line shaft pump configuration.</td>
+    </tr>
+    <tr>
+      <td>Vertical Submersible</td>
+      <td>Vertical submersible pump configuration.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown pump configuration.</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Not applicable.</td>
+    </tr>
+  </tbody>
+</table>
+
+### PumpDrive
+The method used to drive the pump action.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Diesel engine</td>
+      <td>Diesel engine pump drive.</td>
+    </tr>
+    <tr>
+      <td>Electric motor</td>
+      <td>Electric motor pump drive.</td>
+    </tr>
+    <tr>
+      <td>Natural gas engine</td>
+      <td>Natural gas engine pump drive.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown pump drive.</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Not applicable.</td>
+    </tr>
+  </tbody>
+</table>
+
+### PumpType
+The common pump type.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Axial flow</td>
+      <td>Axial flow pump type.</td>
+    </tr>
+    <tr>
+      <td>Centrifugal</td>
+      <td>Centrifugal pump type.</td>
+    </tr>
+    <tr>
+      <td>Mixed flow</td>
+      <td>Mixed flow pump type.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown pump type.</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Not applicable.</td>
+    </tr>
+  </tbody>
+</table>
+
+### MaxDesignHeadFT
+The maximum design head of the pump, expressed as the water surface elevation difference (in feet) between suction and discharge at design conditions.
+
+### PumpCapacityCFS
+Pumping capacity of the station in cubic feet per second (CFS). If multiple pumps are present, this should represent the total station capacity.
+
+### PumpElevation
+Midpoint elevation of the pump impeller or propeller, referenced to RestorFeatVdatum.
+
+### InvertElevation
+Lowest sill or invert elevation of the intake or discharge conduit, referenced to RestorFeatVdatum.
+
+### PumpAgeYRS
+Age of the pump in years (may be derived from DateBuilt or last replacement date).
+
+### DateBuilt
+Date the pump station (or pump installation) was built or substantially completed.
+
+### Station
+Stationing of the feature, typically referenced to a project baseline or alignment (e.g., 10+00).
+
+### Horsepower
+Horsepower rating of the pump or pump motor (if tracked as a separate attribute in implementation).
+
+### FlowRate
+Flow rate of the pump in gallons per minute (GPM) for individual pump units, if applicable.
+
+### PumpStationType
+Type of pump station installation.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Permanent Pump Station</td>
+      <td>Fixed, permanent pump station installation.</td>
+    </tr>
+    <tr>
+      <td>Portable Pump</td>
+      <td>Portable or temporary pump installation.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., photographs, design drawings, pump curves, as-built plans) documenting the pump station.

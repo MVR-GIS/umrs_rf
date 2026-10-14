@@ -1,0 +1,427 @@
+---
+title: "Electrical Utility Segment"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Polyline (Electrical_Utility_Segment).
+
+* Spatial Delineation: Linear paths of underground, conduit-encased, aerial, or submarine electrical power distribution lines linking transformers to pumps and control nodes.
+
+* Structural Types: Direct-buried armored cables, concrete-encased duct banks, rigid galvanized steel (RGS) conduits, and aerial conductor spans.
+
+### Primary Engineering & Operational Objectives
+* Safe Power Distribution: Route electrical power across remote river floodplains, levee crests, and wetland environments without exposure to environmental or mechanical damage.
+
+* Subsurface Protection: Safeguard high-voltage feeder cables from burrowing rodents, flooding, seasonal frost heave, and maintenance grading.
+
+### Technical Specifications & Burial Depths
+* Underground Feeders: Copper conductors (THHN/THWN−2 or XHHW−2) sized to limit voltage drop to <3% at maximum continuous operating current.
+
+* Burial Depth Standards: Minimum burial depth of 36 to 48 in below finished grade.
+
+* Conduit Specification: Schedule 80 heavy-wall PVC conduits or rigid galvanized steel (RGS) where traversing roadways or embankment crossings.
+
+* Detectable Warning Ribbon: High-visibility red magnetic warning tape ("Caution: Buried Electric Line Below") placed 12 in above conduits during trench backfill.
+
+### Construction & Implementation Methodology
+* Trenching & Horizontal Directional Drilling (HDD): Installed via open-cut trenching backfilled with compacted sand bedding, or HDD under existing levees and navigation channels to avoid disturbing structural embankments.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* As-Built Traceability: All linear conduits and pull boxes mapped using sub-meter GPS prior to trench backfill.
+
+* Insulation Resistance Testing: Periodic high-potential (Hi-Pot) insulation testing to detect degradation of cable jackets exposed to high water tables.
+
+## Spatial Feature Definition
+### Definition
+A subdivision of an electrical distribution network, represented as a linear feature that carries electrical power between structures such as poles, towers, transformers, or service points.
+
+### Purpose
+Electrical utility segments are used to document and manage individual runs of electrical distribution or transmission lines within a project. Segmenting the electrical network supports design, coordination with utilities, clearance and safety reviews, maintenance planning, and impact assessment for restoration features and project construction activities.
+
+### Applicability
+Electrical utility segments are applicable wherever overhead or underground electrical lines intersect, parallel, or serve Upper Mississippi River System (UMRS) restoration project areas. Typical uses include mapping power feeds to project facilities, documenting utility crossings of levees or channels, and coordinating with local utilities during design and construction. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+### ElectricalUtilitySegment
+(line) – A subdivision of an electrical distribution network, particularly a line for the transmission of electricity.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>electricalSegmentType</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>OperationStatus</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>realPropertySiteUniqueID</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>realPropertyNetworkUniqueID</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>propertyCodeID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias: Restoration_Type)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Restoration_Type</td>
+      <td>Support feature</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ElectricalUtility</td>
+      <td>Electrical utility</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other, note datum in sdsFeatureDescription</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum</td>
+    </tr>
+  </tbody>
+</table>
+
+### electricalSegmentType
+Classification of the electrical utility segment based on configuration, voltage class, or installation type.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Overhead Distribution</td>
+      <td>Overhead electrical line used for local distribution.</td>
+    </tr>
+    <tr>
+      <td>Overhead Transmission</td>
+      <td>Overhead electrical line used for higher-voltage transmission.</td>
+    </tr>
+    <tr>
+      <td>Underground Distribution</td>
+      <td>Underground electrical line used for local distribution.</td>
+    </tr>
+    <tr>
+      <td>Service Drop</td>
+      <td>Segment providing service connection from main line to a facility or structure.</td>
+    </tr>
+    <tr>
+      <td>Street / Area Lighting Feed</td>
+      <td>Electrical segment dedicated primarily to lighting circuits.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Electrical segment type not covered above; describe in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Segment type has not been determined.</td>
+    </tr>
+  </tbody>
+</table>
+
+### OperationStatus
+Operational status of the electrical utility segment.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Planned</td>
+      <td>Segment is proposed but not yet constructed or energized.</td>
+    </tr>
+    <tr>
+      <td>Active</td>
+      <td>Segment is installed and energized for normal service.</td>
+    </tr>
+    <tr>
+      <td>De-energized</td>
+      <td>Segment is installed but not currently energized.</td>
+    </tr>
+    <tr>
+      <td>Out of Service</td>
+      <td>Segment is no longer used for regular electrical service but remains in place.</td>
+    </tr>
+    <tr>
+      <td>Removed</td>
+      <td>Segment has been physically removed or abandoned in place per utility practice.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Operational status has not been determined.</td>
+    </tr>
+  </tbody>
+</table>
+
+### realPropertySiteUniqueID
+Unique identifier linking the electrical utility segment to a specific real property site or installation record in the real property inventory, when applicable.
+
+### realPropertyNetworkUniqueID
+Unique identifier linking the electrical utility segment to a network-level real property or asset management record (e.g., a regional or enterprise real property system), when applicable.
+
+### propertyCodeID
+Code indicating the real property classification or category of the asset (e.g., utility line, electrical distribution) as defined by the managing agency’s real property coding system.
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., photographs, utility plans, as-built drawings) documenting the electrical utility segment.

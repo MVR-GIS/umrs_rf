@@ -1,0 +1,547 @@
+---
+title: "Island Centerline"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Polyline (Island_Crest_Line or Island_Baseline).
+
+* Spatial Delineation: Centerline axis, design baseline, or high-crest ridge running continuously along the longitudinal alignment of a constructed island.
+
+* Data Fields: Island segment ID, design crest profile grade, baseline stationing, revetment armoring class, and design overtopping threshold.
+
+### Primary Restoration & Engineering Objectives
+* Survey Baseline Control: Serves as the primary reference vector from which cross-sectional design offset templates (perpendicular cross-sections) are generated and staked.
+
+* Hydraulic Ridge Integrity: Tracks the continuous elevation of the island's primary windbreak and flood-deflection backbone.
+
+### Typical Specifications & Geometric Properties
+* Stationing System: Formatted identically to civil alignments (0+00 to L), with stationing typically progressing from the downstream trailing tip to the upstream prow.
+
+* Elevation Control: Tied strictly to the project vertical control network (NAVD88) with construction staking tolerances of ±0.1 ft.
+
+### Construction & Implementation Methodology
+* GPS Navigation Strings: Exported as civil design alignment files into real-time barge GPS tracking suites to guide placement derrick operators and bulldozer operators.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Crest Profile Resurveys: Periodic RTK-GPS profile walks along the island line following major flood inundation cycles to calculate post-consolidation subgrade settlement.
+
+## Spatial Feature Attribute
+### Definition
+IslandLine represents the linear footprint or alignment of an island or island segment within a river or backwater area when the feature is too narrow or detailed to be mapped effectively as a polygon at project scale. It captures the engineered or restored island crest or centerline used for analysis, design reference, or cartographic depiction.
+
+### Purpose
+IslandLine features are used to represent long, narrow, or small island structures where polygon mapping is impractical, while still documenting their location, extent, and functional role in influencing flow, wave action, and habitat conditions. They provide a simplified linear representation that can be used in hydraulic analysis, design layouts, and monitoring of island performance over time.
+
+### Applicability
+IslandLine is applicable where island features are present but are either too small to digitize as polygons at the project mapping scale or where a linear representation (e.g., crest line, centerline, or control alignment) is needed for modeling, design, or management. Typical uses include narrow barrier islands, training-island alignments, or thin island ridges within Upper Mississippi River System (UMRS) restoration projects. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+### IslandLine
+(line) – Linear representation of island structures engineered with a variety of techniques and materials that serve as barriers to flow, wind, and waves.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attributes</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Design</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <!-- The following pump-related fields appear to be inherited from a pump template.
+         If IslandLine does not need pump attributes in your implementation, they can be removed
+         or repurposed. They are retained here as provided. -->
+    <tr>
+      <td>9</td>
+      <td>NumberPumps</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>PumpConfiguration</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>PumpDrive</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>PumpType</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>MaxDesignHeadFT</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>PumpCapacityCFS</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>PumpElevation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>InvertElevation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>PumpAgeYRS</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>DateBuilt</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Station</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+> **Note:** The Type/Subtype section below appears to have been copied from PumpStation.  
+> For IslandLine, you will likely want to change these to `Island Creation` and appropriate island subtypes to match the polygon Island feature class. They are shown here as provided.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Water Level Management</td>
+      <td>Measures taken to imitate natural low flow river conditions with the goal of improving wetland habitats.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pump Station</td>
+      <td>Water pump infrastructure, comprised of a pad, pump, and pump enclosure, used to introduce or remove water from a MSMU or backwater lake.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is a integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by  a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912.</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929.</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other, note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Pump-related Attributes (as currently defined)
+
+> These attributes are included because they appear in your provided IslandLine schema, but they are typically associated with PumpStation. If IslandLine is not intended to store pump information, these may be removed or repurposed in your data model.
+
+### NumberPumps
+Number of a specific type of pumps in the pump station.
+
+### PumpConfiguration
+Pump configuration generally referring to a horizontally or vertically oriented pump. Area available for pump placement usually dictates this.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Horizontal</td>
+      <td>Horizontal pump configuration.</td>
+    </tr>
+    <tr>
+      <td>Vertical Line Shaft</td>
+      <td>Vertical line shaft pump configuration.</td>
+    </tr>
+    <tr>
+      <td>Vertical Submersible</td>
+      <td>Vertical submersible pump configuration.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown pump configuration.</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Not applicable.</td>
+    </tr>
+  </tbody>
+</table>
+
+### PumpDrive
+The method used to drive the pump action.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Diesel engine</td>
+      <td>Diesel engine pump drive.</td>
+    </tr>
+    <tr>
+      <td>Electric motor</td>
+      <td>Electric motor pump drive.</td>
+    </tr>
+    <tr>
+      <td>Natural gas engine</td>
+      <td>Natural gas engine pump drive.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown.</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Not applicable.</td>
+    </tr>
+  </tbody>
+</table>
+
+### PumpType
+The common pump type.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Axial flow</td>
+      <td>Axial flow pump type.</td>
+    </tr>
+    <tr>
+      <td>Centrifugal</td>
+      <td>Centrifugal pump type.</td>
+    </tr>
+    <tr>
+      <td>Mixed flow</td>
+      <td>Mixed flow pump type.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown.</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Not applicable.</td>
+    </tr>
+  </tbody>
+</table>
+
+### MaxDesignHeadFT
+The water elevation difference corresponding to the maximum design head of the pump (feet).
+
+### PumpCapacityCFS
+Pumping capacity in cubic feet per second (if multiple pumps, this should be the total capacity).
+
+### PumpElevation
+The midpoint elevation of the pump impeller or propeller.
+
+### InvertElevation
+The lowest sill elevation (e.g., intake or discharge invert).
+
+### PumpAgeYRS
+Age of the pump in years.
+
+### DateBuilt
+Date the pump station (or installation) was built.
+
+### Station
+Stationing of the feature, typically referenced to a project baseline or alignment (e.g., 10+00).
+
+### Horsepower
+Horsepower of the pump.
+
+### FlowRate
+Flow rate of the pump (GPM).
+
+### PumpStationType
+Type of pump station installation.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Permanent Pump Station</td>
+      <td>Permanent pump station.</td>
+    </tr>
+    <tr>
+      <td>Portable Pump</td>
+      <td>Portable pump station.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., photographs, design drawings, as-built plans).

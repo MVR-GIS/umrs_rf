@@ -1,0 +1,116 @@
+---
+title: "Restoration Features Crosswalk to Navigation and Ecosystem Restoration Program Features"
+format: html
+---
+
+## Introduction
+The following provides restoration features alignment to the Navigation and Ecosystem Restoration Program (NESP) measures.
+
+
+## NESP Restoration Measures
+
+### Island Building
+Includes the following Restoration Features:
+
+Island (line and polygon)
+Dredging
+Notches
+Riverine Flow Structures (line and polygon)
+Wetlands
+
+### Floodplain Restoration
+Includes the following Restoration Features:
+
+Dredging
+Embankments (line and polygon)
+Moist Soil Management Units
+Flora Planting and Seeding
+Wells
+
+### Water Level Management
+Includes the following Restoration Features:
+
+Dredging
+Embankments (line and polygon)
+Water Control Structures
+Fish Structures
+Pump Station
+
+### Backwater Restoration
+Includes the following Restoration Features:
+
+Dredging
+Riverine Flow Structures (line and polygon)
+Fishing Structures
+Notches
+Revetments
+
+### Side Channel Restoration
+Includes the following Restoration Features:
+
+Dredging
+Wetlands
+Flora Planting and Seeding
+Dredging
+Revetments
+
+### Wing Dam / Dike Alterations
+Includes the following Restoration Features:
+
+Revetments
+Dredging
+Riverine Flow Structures (line and polygon)
+
+### Island Protection
+Includes the following Restoration Features:
+
+Dredging
+Revetments
+Riverine Flow Structures (line and polygon)
+
+### Shoreline Protection
+Includes the following Restoration Features:
+
+Island (line and polygon)
+Dredging
+Notches
+Riverine Flow Structures (line and polygon)
+Wetlands
+Flora Planting and Seeding
+
+### Topographic Diversity
+Includes the following Restoration Features:
+
+Island (line and polygon)
+Dredging
+Notches
+Riverine Flow Structures (line and polygon)
+Wetlands
+
+### Dam Point Control
+Includes the following Restoration Features:
+
+????
+
+### Dam Embankment Lowering
+Includes the following Restoration Features:
+
+Dredging
+Notches
+Riverine Flow Structures (line and polygon)
+
+### Reduced Water Level Fluctuation
+Includes the following Restoration Features:
+
+Pump Station
+Dredging
+Notches
+Riverine Flow Structures (line and polygon)
+Wetlands
+
+### Forest Management
+Includes the following Restoration Features:
+
+Flora Planting and Seeding
+Riverine Flow Structures (line and polygon)
+Wetlands

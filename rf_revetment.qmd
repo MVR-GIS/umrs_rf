@@ -1,0 +1,428 @@
+---
+title: "Revetment"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Polygon or Polyline(Revetment_Armor_Band).
+
+* Spatial Delineation: Armored protective blanket placed along littoral shoreline banks, island provar edges, wing dam abutments, and channel margins.
+
+* Materials: Heavy quarried angular stone riprap, crushed aggregate bedding, and non-woven geotextile filter fabric.
+
+### Primary Restoration & Engineering Objectives
+* Shoreline Erosion Arrest: Neutralize high hydraulic shear stresses (τ=γRS) induced by commercial towboat propeller wash, vessel wakes, and flood currents.
+
+* Wind-Wave Dissipation: Protect constructed earthen island fills and natural delta edges from wind-fetch wave impact and slumping.
+
+* Littoral Micro-Cover: Stone voids provide interstitial refuge and feeding zones for macroinvertebrates and small fish species.
+
+### Typical Cross-Sections, Dimensions & Sizing Criteria
+* Armor Sizing: USACE Class II to Class IV stone riprap (d 50 =12 to 18 in; top weight up to 1,500 lbs).
+
+* Blanket Thickness: 1.5× to 2.0× the d 100  stone size (typically 18 to 30 in thick).
+
+* Slope Geometry: Maximum stable slope angle is 1V:2H (1V:3H preferred).
+
+* Toe Key-In: Armored toe trench excavated 3.0 to 5.0 ft into the channel bed, or a wide stone launching apron (5 to 10 ft wide) designed to self-launch and protect the bank toe against scour.
+
+### Construction & Implementation Methodology
+* Marine Placement: Work conducted via spud barges using long-reach excavators equipped with hydraulic stone grapples or clamshell buckets to place stone smoothly without tearing geotextile.
+
+* Filter Layer Installation: High-survivability non-woven geotextile placed under the stone to stop fine-grained subgrade soils from leaching out through riprap voids.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Gradation Testing: Quarry riprap testing per ASTM standards to ensure durability, bulk specific gravity (≥2.60), and resistance to freeze-thaw cycles.
+
+* Post-Flood Audits: Boat-based visual and sonar scans to detect riprap displacement, toe undermining, or ice plucking along the waterline.
+
+
+## Spatial Feature Attribute
+### Definition
+A revetment is a cover or facing of erosion-resistant material placed directly on an existing slope, embankment, or dike. Unlike seawalls, revetments are not self-supporting and depend on the underlying soil for support.
+
+### Purpose
+Revetments are used to stabilize river banks and protect shorelines from strong waves and currents. Bank revetments prevent erosion, maintain a stable channel, and support new habitat creation. (UMRR Design Handbook, 2012)
+
+### Applicability
+The primary forces that affect shorelines are river currents and wind-driven wave action; ice action and waves created by towboats or recreational boats can also cause erosion. Revetment stabilization techniques can be employed singly or in combination to protect shoreline and add habitat diversity. Gradual side slopes and sand or mud soils can benefit turtles and waterbirds that nest, feed, and loaf on shorelines. Native plantings can be more aesthetically pleasing than traditional riprap, and traditional stabilization techniques can be refined (e.g., larger and mixed-grade rock) to improve habitat diversity for fish and invertebrates. (Report to Congress, 2004)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: Points should have well top elevation as Z value if available.
+
+### Revetment
+(polygon) – An area faced with stone or other material along the shoreline designed to stabilize the bank or protect it from erosion.
+
+![](images/revetment.jpg){width=75%}
+---
+
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Atribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Design</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>QuantityTONS</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>MaterialThicknessIN</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>BeddingThicknessIN</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>GeoTextile</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>StartStation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>EndStation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>sdsID</td>
+      <td>Required</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>mediaIDFK</td>
+      <td>Required</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Shoreline Protection</td>
+      <td>Measures taken to reduce erosion from banks and islands due to wind, wave, and ice action.</td>
+    </tr>
+    <tr>
+      <td>Channel Modifications</td>
+      <td>Measures taken to train the main channel of a river and to modify secondary channels.</td>
+    </tr>
+    <tr>
+      <td>Water Level Management</td>
+      <td>Measures taken to imitate natural low-flow river conditions with the goal of improving wetland habitats.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific revetment design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rock revetment</td>
+      <td>Placement of riprap along a shoreline to a specified depth; may include a geotextile filter beneath rock. Generally used to reduce shoreline erosion from waves and ice.</td>
+    </tr>
+    <tr>
+      <td>Off-bankline revetment</td>
+      <td>Rock structure placed parallel to a caving river bank, which can be notched; used to reduce erosion and provide diverse habitat.</td>
+    </tr>
+    <tr>
+      <td>Root-wad revetment</td>
+      <td>Revetment constructed by keying logs into the bankline with root wads extending into the channel; used to reduce stream bank erosion, provide fish cover, shade, detritus, insect habitat, and a diversity of habitats.</td>
+    </tr>
+    <tr>
+      <td>Concrete Revetment</td>
+      <td>Revetment constructed from concrete.</td>
+    </tr>
+    <tr>
+      <td>Sheet pile revetment</td>
+      <td>Revetment constructed using interlocking sheet piles to form abutments or retaining walls.</td>
+    </tr>
+    <tr>
+      <td>Gabion Wall</td>
+      <td>Wall constructed from large stones or concrete blocks placed in a wire mesh cage for protection against waves or water turbulence.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration, including the party responsible for the feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. Once constructed by USACE, it remains classified as USACE Built even if later repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>Function of an existing feature not built by USACE has been enhanced by a USACE-built or repaired feature.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>Existing feature not built by USACE has been directly improved or repaired by USACE.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>Feature planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature built by another organization or government agency and integral to the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>Function of a feature built by another organization has been enhanced by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>Existing feature directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912.</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929.</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other; note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+### QuantityTONS
+Quantity of revetment material placed, measured in tons.
+
+### MaterialThicknessIN
+Thickness of revetment material placed, measured in inches.
+
+### BeddingThicknessIN
+Thickness of bedding or underlying layer (e.g., bedding stone or sand) in inches.
+
+### GeoTextile
+Indicates if geotextile fabric was used beneath or within the revetment.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Yes</td>
+      <td>Geotextile fabric was used.</td>
+    </tr>
+    <tr>
+      <td>No</td>
+      <td>Geotextile fabric was not used.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Use of geotextile fabric is unknown.</td>
+    </tr>
+  </tbody>
+</table>
+
+### StartStation
+Beginning station of the revetment feature, typically referenced to a project baseline or alignment (e.g., 10+00).
+
+### EndStation
+Ending station of the revetment feature.
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., photographs, design drawings, as-built plans) documenting the revetment.

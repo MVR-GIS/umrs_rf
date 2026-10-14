@@ -1,0 +1,365 @@
+---
+title: "Notch"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+## Spatial & Geometric Definition
+* Geometry Type: Polygon or Point (Notch_Geometry).
+
+* Spatial Delineation: Geometric cut, depression, or gap engineered into rock training structures, wing dams, closing dams, or earthen levee crests.
+
+* Cross-Sectional Typology: Trapezoidal, parabolic, or rectangular weir cuts.
+
+### Primary Restoration & Engineering Objectives
+* Secondary Channel Revitalization: Pass controlled baseflow through closing dams to refresh side channels without destabilizing main-channel navigation drafts.
+
+* Bathymetric Scour Generation: Concentrate localized flow vectors through the notch throat, carving deep downstream plunge pools (10 to 25 ft deep) that function as prime overwintering fish holes.
+
+* Sediment Purging: Re-energize sediment transport capacity through backwaters to purge deposited silt plugs.
+
+### Typical Cross-Sections, Dimensions & Sizing Criteria
+* Throat Widths: Bottom widths typically range from 10 to 50 ft; side slopes cut at 1V:2H to 1V:3H.
+
+* Depth of Invert: Invert set 1.0 to 4.0 ft below the parent weir crest or normal flat pool elevation.
+
+* Hydraulic Conveyance: Sized using broad-crested weir formulas (Q=C d LH 3/2 ) to restrict diverted river discharge to calibrated project thresholds (typically <5% of total channel discharge).
+
+### Construction & Implementation Methodology
+* Marine Excavation: Existing stone removed using barge-mounted hydraulic excavators equipped with rock buckets or heavy clamshells.
+
+* Bed & Abutment Armoring: Installing heavy riprap transitions along notch edges and lining the downstream plunge impact zone with Class IV–V stone to halt headcut unraveling.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Single-Beam Sonar Soundings: Annual hydrographic cross-sections through the notch and downstream scour basin to verify that scour hole depth remains stable and does not undermine the main weir abutments.
+
+## Spatial Feature Attribute
+### Definition
+A notch is a deliberate opening cut into a riverine flow structure or levee (typically a dike) used to control the flow of water into and out of a low-flow area or adjacent floodplain.
+
+### Purpose
+A notch creates a controlled gap or opening in the structure. Its purpose is to regulate water flow, manage river levels, and prevent damage from excessive water buildup. Notching can support flow regulation, sediment management, habitat creation, and flood control by selectively passing water and sediment and reconnecting channels and floodplains.
+
+### Applicability
+Notches are applicable where targeted hydraulic connections are needed between the main channel and backwaters, side channels, or floodplain areas. They are commonly used to improve habitat, reduce sedimentation, restore natural inundation patterns, and modify river training structures or levees to better meet environmental objectives within Upper Mississippi River System (UMRS) restoration projects. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+### Notch
+(point) – A notch in a riverine flow structure or levee used to control the flow of water into and out of the low-flow area.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>ConstructionDate</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>NotchElevation</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>NotchWidthFT</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Station</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Channel Modifications</td>
+      <td>Measures taken to train the main channel of a river and to modify secondary channels.</td>
+    </tr>
+    <tr>
+      <td>Floodplain Restoration</td>
+      <td>Measures taken to improve natural floodplain function and habitat.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific notch design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Wing dam notch</td>
+      <td>Wing dam modification that significantly lowers a section of the dam to support diverse habitats while maintaining navigation channel function.</td>
+    </tr>
+    <tr>
+      <td>Closure structure notch</td>
+      <td>Closure structure modification that significantly lowers a section of the structure, allowing decreased sedimentation and enhanced habitat.</td>
+    </tr>
+    <tr>
+      <td>Dike notch</td>
+      <td>Dike modification that significantly lowers a section of the structure, allowing decreased sedimentation and enhanced habitat.</td>
+    </tr>
+    <tr>
+      <td>Levee notch</td>
+      <td>A low spot excavated in a frontline levee to allow inundation of the area behind the levee above a specific flow.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature not built by USACE has been enhanced by a USACE-built or repaired feature.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>Feature planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature built by another organization or government agency and integral to the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>Function of a feature built by another organization has been enhanced by a feature built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>Existing feature directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912.</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929.</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other; note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+### ConstructionDate
+The date of construction (or reconstruction) of the notch.
+
+### NotchElevation
+Elevation of the bottom of the notch, referenced to the vertical datum specified in RestorFeatVdatum.
+
+### NotchWidthFT
+Width of the notch in feet.
+
+### Station
+Stationing of the feature, typically referenced to a project baseline or alignment (e.g., 10+00).
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., design drawings, construction photos, as-built plans) documenting the notch.

@@ -1,0 +1,395 @@
+---
+title: "Flow Channel"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+## Spatial & Geometric Definition
+* Geometry Type: Polygon (Flow_Channel_Footprint).
+
+* Spatial Delineation: Channel boundaries of excavated aquatic chutes, secondary conveyance corridors, or backwater flow-supply corridors reconnecting the main river to isolated interior wetlands.
+
+* Hydraulic Classification: Continuous low-velocity flow channels, seasonal skimming channels, or flood pulse distributors.
+
+### Primary Restoration & Engineering Objectives
+* Oxygenated Water Delivery: Introduce low volumes of oxygen-rich river water into stagnant interior backwaters to prevent winter and summer anoxic fish kills.
+
+* Biological Corridor Connectivity: Provide passage routes for migratory riverine fish traveling between river feeding reaches and sheltered nursery lakes.
+
+* Controlled Energy Conveyance: Route discharge without inducing bed scour, toe destabilization, or excessive sediment imports into fragile interior basins.
+
+### Typical Cross-Sections, Dimensions & Sizing Criteria
+* Bottom Widths: 20 to 60 ft; side slopes stabilized at 1V:3H or flatter.
+
+* Longitudinal Bed Slope: Very flat gradient (S≤0.0002 to 0.0005) to constrain cross-sectional average velocities beneath critical erosive limits (v≤1.0 to 1.5 ft/s).
+
+* Inlet Control Sills: Hard-armored rock sills placed at the channel inlet set 0.5 to 1.5 ft above normal pool to block bedload sediment entry during low-water regimes.
+
+### Construction & Implementation Methodology
+* Excavation Fleet: Low-ground-pressure (LGP) amphibious excavators or spud-barge mechanical dredge rigs working from downstream upstream to maintain positive gravity dewatering.
+
+* Bank Armor Integration: Riprap placement along channel entrance mouths and sharp bendway curves subject to centrifugal shear forces.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Acoustic Flow Gauging: Seasonal ADCP velocity transects to confirm flow splits match calibrated hydrodynamic model predictions (typically 1% to 5% of main river discharge).
+
+* Debris Clearance: Annual post-flood inspection to clear lodged drift logs and alluvial sand wedges from channel entrances.
+
+
+## Spatial Feature Attribute
+### Definition
+A FlowChannel is an excavated channel, created by mechanical or hydraulic means, intended to allow the flow of water across, into, or out of the project area or any subcomponent of a project area.
+
+### Purpose
+Flow channels are constructed to direct, convey, or redistribute water in support of restoration objectives. They can be used to reconnect floodplains or backwaters, improve circulation, manage water levels, enhance habitat connectivity, and reduce stagnant or low-quality water conditions by providing designed flow paths.
+
+### Applicability
+Flow channels are applicable wherever controlled or enhanced conveyance of water is needed within Upper Mississippi River System (UMRS) restoration projects. They are used in both terrestrial and aquatic settings to route water between project features (e.g., MSMUs, backwater lakes, side channels), restore or mimic natural flow patterns, and support habitat, sediment, and water quality objectives. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: Polygon nodes should have z values; elevations should be taken from as-built survey or design documents.
+
+### FlowChannel
+(polygon) – An excavated channel (via mechanical or hydraulic means) intended to allow for the flow of water across, into, or out of the project area or any subcomponent of a project area.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>ConstructionMethod</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <!-- 10 is a duplicate ConstructionMethod in the source; retained here as given, but
+         in implementation you may wish to remove or rename this field. -->
+    <tr>
+      <td>10</td>
+      <td>ConstructionMethod</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>VolumeCY</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>CutWidthFT</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>CutLengthFT</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>CutDepthFT</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias: Type)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Flow Channel</td>
+      <td>An excavated channel (via mechanical or hydraulic means) intended to allow for the flow of water across, into, or out of the project area or any subcomponent of a project area.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Terrestrial</td>
+      <td>Removal of sediment to create channels to allow for flow of water across or through predominantly terrestrial areas.</td>
+    </tr>
+    <tr>
+      <td>Aquatic</td>
+      <td>Removal of sediment to create channels to allow for flow of water within predominantly aquatic areas.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912.</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929.</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other; note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+### ConstructionMethod
+Method used to remove sediment and construct the flow channel.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mechanical</td>
+      <td>Removal method using mechanical equipment (e.g., excavators, draglines).</td>
+    </tr>
+    <tr>
+      <td>Hydraulic</td>
+      <td>Removal method using hydraulic equipment (e.g., cutterhead or plain suction dredges).</td>
+    </tr>
+  </tbody>
+</table>
+
+### VolumeCY
+Volume of material removed in cubic yards.
+
+### CutWidthFT
+Width of the excavated channel in feet.
+
+### CutLengthFT
+Length of the excavated channel in feet.
+
+### CutDepthFT
+Average depth of the excavated channel in feet.
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., design drawings, dredging records, as-built plans, photographs) documenting the flow channel.
+

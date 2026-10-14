@@ -1,0 +1,366 @@
+---
+title: "Embankment"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+## Spatial & Geometric Definition
+* Geometry Type: Polygon (Embankment_Footprint).
+
+* Spatial Delineation: Terrestrial earthen footprint bounded by the outer intersection lines of outer fill slopes with native subgrade alluvium.
+
+* Functional Roles: Isolating moist soil units, containing perimeter dredged placement cells, protecting wetlands from catastrophic river flood surges, and providing heavy maintenance vehicle access.
+
+### Primary Restoration & Engineering Objectives
+* Hydraulic Isolation: Retain or exclude river floodwaters to facilitate independent moisture and pool-depth management.
+
+* Controlled Overtopping Resistance: Engineered to withstand controlled, non-catastrophic submergence during 10- to 25-year flood recurrence events.
+
+* Containment Integrity: Form stable retention dikes capable of impounding fine dredged hydraulic slurries without slope shear failures.
+
+### Typical Cross-Sections, Dimensions & Sizing Criteria
+* Crest Width: 10.0 to 14.0 ft for maintenance roadways; 8.0 ft for non-vehicular perimeter berms.
+
+* Side Slopes: Interior slopes at 1V:3H to 1V:4H; riverward exterior slopes at 1V:4H to 1V:6H to mitigate wind-wave runup.
+
+* Structural Core: Central compacted low-permeability cohesive clay core (CL/CH) with a minimum 3.0-ft bottom cutoff trench keyed into native impermeable strata.
+
+* Freeboard: Minimum 2.0 to 3.0 ft above maximum managed impoundment pool stage.
+
+### Construction & Implementation Methodology
+* Subgrade Preparation: Stripping topsoil and organic muck (6 to 18 in); proof-rolling subgrade with heavy vibratory compactors.
+
+* Lift Placement & Compaction: Clay and silty-clay fill spread in loose horizontal lifts of 8.0 in maximum, compacted to ≥95% of Standard Proctor Maximum Dry Density (ASTM D698) within ±2% of optimum moisture.
+
+* Slope Armoring: Class I to Class II rock riprap placed over non-woven geotextile on exterior wave faces; native perennial root mats established on interior slopes.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Geotechnical Monitoring: Piezometer installations along toe lines to monitor phreatic water lines and internal seepage gradients.
+
+* Routine Inspection: Quarterly inspections for burrowing animals (muskrats/beavers), desiccation cracking, mechanical rutting, and woody tree encroachment along levee toes.
+
+
+## Spatial Feature Attribute
+
+### Definition
+An embankment is a raised earthen structure constructed to control or contain water, provide flood protection, or create topographic diversity within floodplain ecosystems.
+
+### Purpose
+Embankment systems are used to provide adequate flood protection, manage water levels, and shape floodplain topography. They can isolate management units, guide or restrict flows, protect infrastructure or habitats from inundation or erosion, and create elevated or sheltered areas that support diverse plant and wildlife communities.
+
+### Applicability
+Embankments are applicable wherever control of water levels or patterns of inundation is needed in Upper Mississippi River System (UMRS) restoration projects. Typical uses include forming the boundaries of moist soil management units, creating berms around backwater lakes or wetlands, protecting restoration features from unwanted flooding or erosion, and shaping topographic relief to improve habitat diversity. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: Elevations should be taken from as-built survey or design documents.
+
+### Embankment
+(polygon) – Embankments are raised earthen structures for the purpose of controlling water or creating topographic diversity in floodplain ecosystems.
+
+![](images/engriverembankment.jpg){width=75%}
+---
+
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attributes</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Design</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>CrestWidthFT</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>EnbankmentMaterial</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>EnbankmentLenghtFT</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>EmbankmentSideSlope</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+> Note: Specific coded values for Type were not provided in the source text for Embankment.  
+> In many implementations, Embankments fall under Floodplain Restoration or Water Level Management.
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific embankment design feature categories.
+
+> Note: SubType coded values were not provided in the source text.  
+> Example values might include Exterior Berm, Interior Berm, Levee Segment, or Training Embankment, depending on project conventions.
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912.</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929.</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other; note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+### CrestWidthFT
+Width of the embankment top or crest in feet.
+
+### EnbankmentMaterial
+Primary material used to construct the embankment.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sand</td>
+      <td>Sand material.</td>
+    </tr>
+    <tr>
+      <td>Clay</td>
+      <td>Clay material.</td>
+    </tr>
+    <tr>
+      <td>Sand with clay core</td>
+      <td>Embankment composed primarily of sand with a central clay core.</td>
+    </tr>
+    <tr>
+      <td>Sand with clay cap</td>
+      <td>Embankment composed primarily of sand with a clay cap.</td>
+    </tr>
+    <tr>
+      <td>Earthen</td>
+      <td>Mixture of sand and clay, used when material type is not specified in design or as-built drawings.</td>
+    </tr>
+  </tbody>
+</table>
+
+### EnbankmentLenghtFT
+Length of the embankment in feet (note: field name includes a typographical error “Lenght” retained for schema consistency).
+
+### EmbankmentSideSlope
+Side slope of the embankment, typically expressed as a horizontal-to-vertical ratio (e.g., 3H:1V). May be stored as text or numeric representation per data model convention.
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., design drawings, cross sections, as-built surveys, photographs) documenting the embankment.

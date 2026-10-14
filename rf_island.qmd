@@ -1,0 +1,542 @@
+---
+title: "Island"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+## Spatial & Geometric Definition
+* Geometry Type: Polygon (Restoration_Island_Polygon).
+
+* Spatial Delineation: Subaerial landmass polygon constructed above normal flat pool within broad, shallow river expanses.
+
+* Architectural Typology: Barrier islands, multi-island archipelagos, horseshoe bays, and interior spits.
+
+### Primary Restoration & Engineering Objectives
+* Wind-Wave Fetch Reduction: Break wind-wave generation across shallow open bays, reducing bottom orbital wave resuspension and restoring water clarity for submersed aquatic vegetation (SAV).
+
+* Terrestrial Habitat Creation: Provide secure, predator-isolated nesting habitat for migratory waterfowl, shorebirds, turtles, and bottomland hardwood trees.
+
+* Sediment Trapping: Create sheltered leeward lagoons that promote fine sediment drop-out and organic soil building.
+
+### Typical Cross-Sections, Dimensions & Sizing Criteria
+* Crest Elevations: Tiered multi-level profiles:
+
+* High Ridges (5 to 10 ft above pool): Designed above the 10- to 25-year flood stage to preserve terrestrial flood refugia and bottomland hardwood mast forests.
+
+* Low Sills / Wetland Benches (1 to 3 ft above pool): Frequently overtopped to sustain emergent marsh fringes.
+
+* Base Widths & Footprints: Base widths of 100 to 400 ft; total individual footprints ranging from 2 to 50+ acres.
+
+* Side Slopes: Windward wave-impact faces sloped at 1V:3H to 1V:4H; leeward slopes shaped gently at 1V:8H to 1V:20H down to shallow littoral shelves.
+
+### Construction & Implementation Methodology
+* Material Sourcing & Sequencing: Fine to medium granular dredged sand mechanically or hydraulically placed to form the structural core.
+
+* Cohesive Topsoil Caps: Capping the sand core with a 1.0- to 2.0-ft layer of fine-grained cohesive dredge silt/clay to support plant rooting and resist wind deflation.
+
+* Windward Revetment Placement: Placing non-woven geotextile and Class II–III riprap along exposed upstream and windward shorelines concurrently with fill operations.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Topographic Lidar & RTK Surveys: Post-construction as-built terrain modeling to verify settled elevations against contract cut/fill balances.
+
+* Shoreline Stability Audits: Biannual visual inspections to detect riprap displacement, wave notch cutting, or flank erosion following major spring river floods.
+
+
+## Spatial Feature Attributes
+### Definition
+Island features are engineered or restored landforms within a river or backwater area, constructed or modified using a variety of techniques and materials to provide physical barriers to flow, wind, and waves, and to support habitat and geomorphic functions.
+
+### Purpose
+The loss of islands in the Upper Mississippi River is primarily due to human-induced alterations to the river’s natural hydrology and sediment dynamics. Dams, channelization, sediment loss, and altered floodplain connectivity have disrupted the processes that create and maintain islands. As a result, islands are increasingly vulnerable to erosion, lack of sediment deposition, and other environmental stresses, leading to their gradual disappearance. This loss impacts biodiversity and the overall health of the river ecosystem, emphasizing the need for restoration and management efforts to protect and rebuild these important habitats. Island creation serves to restore structural diversity, reduce wave and current energy, improve sediment processes, and provide critical habitat for fish, wildlife, and plants.
+
+### Applicability
+Island creation serves to restore and enhance river ecosystems, providing diverse habitats for wildlife, improving sediment and water quality processes, supporting floodplain and aquatic species health, and promoting biodiversity. Islands can be incorporated into restoration designs to protect shorelines, create sheltered backwaters, influence flow paths, and support vegetation and nesting habitat. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: Polygon nodes should have z values; elevations should be taken from as-built survey or design documents.
+
+### Island
+(polygon) – Island structures engineered with a variety of techniques and materials that serve as barriers to flow, wind, and waves.
+
+![](images/island.jpg){width=75%}
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attributes</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Design</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>WaterOvertopping</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>PrimaryMaterial</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>SecondaryMaterial</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>DredgeMaterialPlacement</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Acres</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Island Creation</td>
+      <td>Measures taken to construct islands in rivers.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific island design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Barrier island</td>
+      <td>Island structures engineered with a variety of techniques and materials that serve as barriers to flow, wind, and waves.</td>
+    </tr>
+    <tr>
+      <td>Seed island</td>
+      <td>Rock or log structures placed perpendicular to currents in areas where coarse sediment transport is occurring, used to create islands via sediment accumulation due to reduced velocities.</td>
+    </tr>
+    <tr>
+      <td>Nourished seed island</td>
+      <td>Rock or log structures perpendicular to currents with sand placed on the upstream or downstream side; currents reshape sand naturally, used where coarse sediment transport is low.</td>
+    </tr>
+    <tr>
+      <td>Rock sill</td>
+      <td>Short, steep ramp comprised of boulders created to circumvent in-channel barriers to natural fish movement.</td>
+    </tr>
+    <tr>
+      <td>Sand tip</td>
+      <td>Low structures overtopped more frequently than islands, used to increase flow into areas during floods or to maintain flood flow into secondary channels; may include geotechnical membrane in the upstream sill to reduce seepage.</td>
+    </tr>
+    <tr>
+      <td>Sand flat</td>
+      <td>Areas of sand along islands precisely graded to be seasonally inundated to very shallow depths (0.1–0.2 ft) to create microtopography and habitat diversity.</td>
+    </tr>
+    <tr>
+      <td>Loafing structure</td>
+      <td>Large woody debris anchored into rock structures or placed along shorelines to provide loafing habitat for waterfowl, turtles, and other fauna, as well as fish habitat and enhanced shoreline aesthetics.</td>
+    </tr>
+    <tr>
+      <td>Rock/Log island</td>
+      <td>Structures constructed using rock to anchor large woody debris in the river channel, providing habitat diversity and loafing structures while improving aesthetics.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912.</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929.</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other; note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+### WaterOvertopping
+Description of the relationship between the island feature and water level.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AlwaysDry</td>
+      <td>Not covered at high water under average meteorological conditions.</td>
+    </tr>
+    <tr>
+      <td>AlwaysSubmerged</td>
+      <td>Remains covered by water at all times under average meteorological conditions.</td>
+    </tr>
+    <tr>
+      <td>Awash</td>
+      <td>Flush with or washed by waves at low water under average meteorological conditions.</td>
+    </tr>
+    <tr>
+      <td>CoversAndUncovers</td>
+      <td>Projection from the bottom that periodically extends above and is submerged below the water surface.</td>
+    </tr>
+    <tr>
+      <td>Floating</td>
+      <td>Resting or moving on the surface of a water body.</td>
+    </tr>
+    <tr>
+      <td>PartlySubmergedAtHighWater</td>
+      <td>Partially covered and partially dry at high water.</td>
+    </tr>
+    <tr>
+      <td>SubjectToInundationOrFlooding</td>
+      <td>Area or structure periodically covered by flood waters.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Relationship to water level is unknown.</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Not applicable.</td>
+    </tr>
+  </tbody>
+</table>
+
+### PrimaryMaterial
+Primary construction material used for the island feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sand</td>
+      <td>Sand.</td>
+    </tr>
+    <tr>
+      <td>Rock</td>
+      <td>Rock.</td>
+    </tr>
+    <tr>
+      <td>Fines</td>
+      <td>Fine sediment including clay and clay mixtures.</td>
+    </tr>
+    <tr>
+      <td>Timber/Wood</td>
+      <td>Timber or wood, including logs or root wads.</td>
+    </tr>
+    <tr>
+      <td>Earthen</td>
+      <td>Mixture of sand and fines.</td>
+    </tr>
+    <tr>
+      <td>Concrete</td>
+      <td>Concrete.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SecondaryMaterial
+Secondary construction material, if applicable.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sand</td>
+      <td>Sand.</td>
+    </tr>
+    <tr>
+      <td>Rock</td>
+      <td>Rock.</td>
+    </tr>
+    <tr>
+      <td>Fines</td>
+      <td>Fine sediment including clay and clay mixtures.</td>
+    </tr>
+    <tr>
+      <td>Timber/Wood</td>
+      <td>Timber or wood, including logs or root wads.</td>
+    </tr>
+    <tr>
+      <td>Earthen</td>
+      <td>Mixture of sand and fines.</td>
+    </tr>
+    <tr>
+      <td>Concrete</td>
+      <td>Concrete.</td>
+    </tr>
+  </tbody>
+</table>
+
+### DredgeMaterialPlacement
+Describes whether dredged material was placed to create or augment the island feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Yes</td>
+      <td>Dredged material was placed to create or augment the feature.</td>
+    </tr>
+    <tr>
+      <td>No</td>
+      <td>No dredged material was used.</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Not applicable.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Use of dredged material is unknown.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Acres
+Acreage of the island feature.
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., photographs, design drawings, construction records, as-built plans) documenting the island feature.

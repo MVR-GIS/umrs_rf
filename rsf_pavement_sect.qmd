@@ -1,0 +1,425 @@
+---
+title: "Pavement Section"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Polygon (Pavement_Section_Footprint).
+
+* Spatial Delineation: Surface areas receiving engineered structural wearing courses across pump station staging yards, boat ramps, crest access roads, and parking turnarounds.
+
+* Surfacing Typology: Hot-mix asphalt (HMA), cast-in-place reinforced concrete pavement, and compacted crushed limestone aggregate surfacing.
+
+### Primary Engineering & Civil Objectives
+* Load-Bearing Surface: Support heavy maintenance vehicle loads (e.g., HS-20 truck loading: crane boom trucks, fuel tankers, and tractor-trailers) without rutting underlying subgrades.
+
+* Erosion & Overtopping Resistance: Prevent surface shear erosion on embankment crests and ramp approaches during controlled overtopping flood events.
+
+* All-Weather Operational Access: Ensure round-the-clock maintenance access to remote water control structures during heavy rain and flood-fighting operations.
+
+### Typical Structural Pavement Cross-Sections
+* Heavy-Duty Concrete (Pump Yards / Ramps): 8.0 to 10.0 in cast-in-place concrete (fc′ ≥4,000 psi) with epoxy-coated rebar mats, underlain by 6.0 in of crushed aggregate base over non-woven geotextile.
+
+* Crushed Aggregate Surfacing (Levee Roads): 6.0 to 8.0 in dense-graded crushed limestone road base (IDOT/WDOT dense-graded aggregate), compacted to ≥98% Standard Proctor density.
+
+* Cross-Slope Drainage: Crowned centerline or uniform cross-slope of 2.0% directing surface sheet flow into vegetated side swales.
+
+### Construction & Implementation Methodology
+* Subgrade Stabilization: Proof-rolling native subgrades; subgrade stabilization using biaxial geogrids where crossing soft alluvial clay strata.
+
+* Joint Sealants & Finishing: Concrete slabs scored with transverse contraction joints every 15 ft; silicone joint sealants applied to exclude water and freeze-thaw cracking.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Pavement Condition Audits: Annual inspections checking for surface rutting, washboarding, joint spalling, or subgrade settlement following flood inundation.
+
+
+## Spatial Feature Attributes
+### Definition
+A pavement section is a portion of a pavement branch that differs in some aspect from other sections such that further segmentation is required to uniquely identify that section. For example, if the only difference in a road is the pavement material type – concrete for part of the road and asphalt for the remainder of the road – that road branch has two sections.
+
+### Purpose
+Pavement sections are defined to document and manage areas of pavement that have distinct materials, structural composition, age, or performance characteristics. Segmenting pavement into sections supports design, maintenance planning, inspection, rehabilitation, and lifecycle management of project roadways and paved areas.
+
+### Applicability
+Pavement sections are applicable wherever paved surfaces occur within Upper Mississippi River System (UMRS) restoration projects, including access roads, parking areas, staging areas, and operational surfaces. They are used when differences in pavement type, thickness, construction date, or condition require unique identification for engineering or asset management purposes. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+### PavementSection
+(polygon) – A pavement section is a portion of a pavement branch that differs in some aspect from other sections such that further segmentation is required to uniquely identify that section.
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>PavementSectionType</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>OperationStatus</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>realPropertySiteUniqueID</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>realPropertyNetworkUniqueID</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>propertyCodeID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias: Restoration_Type)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Restoration_Type</td>
+      <td>Support feature</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Road Utility</td>
+      <td>Road utility</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other, note datum in sdsFeatureDescription</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum</td>
+    </tr>
+  </tbody>
+</table>
+
+### PavementSectionType
+Classification of the pavement section based on its structural or material characteristics.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rigid Concrete</td>
+      <td>Pavement section constructed with portland cement concrete.</td>
+    </tr>
+    <tr>
+      <td>Flexible Asphalt</td>
+      <td>Pavement section constructed with asphalt concrete or bituminous surface.</td>
+    </tr>
+    <tr>
+      <td>Composite</td>
+      <td>Pavement section consisting of a combination of concrete and asphalt layers.</td>
+    </tr>
+    <tr>
+      <td>Aggregate / Gravel</td>
+      <td>Pavement section with unbound aggregate or gravel surface.</td>
+    </tr>
+    <tr>
+      <td>Stabilized Soil</td>
+      <td>Pavement section with chemically or mechanically stabilized soil surface.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Pavement section type not covered above; describe in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Pavement section type has not been determined.</td>
+    </tr>
+  </tbody>
+</table>
+
+### OperationStatus
+Operational status of the pavement section.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Planned</td>
+      <td>Pavement section is proposed but not yet constructed.</td>
+    </tr>
+    <tr>
+      <td>Active</td>
+      <td>Pavement section is constructed and in regular use.</td>
+    </tr>
+    <tr>
+      <td>Limited Use</td>
+      <td>Pavement section is in place but subject to seasonal, restricted, or intermittent use.</td>
+    </tr>
+    <tr>
+      <td>Out of Service</td>
+      <td>Pavement section is no longer used for regular traffic but remains in place.</td>
+    </tr>
+    <tr>
+      <td>Removed</td>
+      <td>Pavement section has been removed or reclaimed.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Operational status has not been determined.</td>
+    </tr>
+  </tbody>
+</table>
+
+### realPropertySiteUniqueID
+Unique identifier linking the pavement section to a specific real property site or installation record in the real property inventory, when applicable.
+
+### realPropertyNetworkUniqueID
+Unique identifier linking the pavement section to a network-level real property or asset management record (e.g., a regional or enterprise real property system), when applicable.
+
+### propertyCodeID
+Code indicating the real property classification or category of the asset (e.g., paved road, parking area, apron) as defined by the managing agency’s real property coding system.
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.

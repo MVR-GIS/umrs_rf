@@ -1,0 +1,65 @@
+---
+title: "Case Studies"
+format: html
+---
+
+
+### **An Integrated Framework in Practice: Detailed Case Studies in USACE Upper Mississippi River Restoration**
+
+#### **Introduction: From a Toolkit of Features to Integrated Systems**
+
+The ecological restoration of the Upper Mississippi River System (UMRS) is a monumental undertaking guided by the sophisticated methodology outlined in the U.S. Army Corps of Engineers' (USACE) *2012 UMRR EMP Environmental Design Handbook*. While the handbook provides a detailed lexicon of individual "restoration features," their true power is only realized when they are integrated into a cohesive project designed to address specific, large-scale ecological deficits. To understand this methodology in its practical application, it is best to examine it through the lens of real-world case studies. This chapter will therefore explore the USACE restoration process through four major Habitat Rehabilitation and Enhancement Projects (HREPs). Each section will deconstruct a project to show how a unique combination of primary and supporting features was used to address its specific ecological problems, demonstrating how the abstract toolkit is transformed into functional, resilient, and interconnected ecosystems on the ground.
+
+---
+
+### **Case Study 1: The Pool 8 Islands HREP - Geomorphic Restoration for Ecological Resurgence**
+
+**Project Context and Goal:** The Pool 8 Islands HREP, located in the vast Weaver Bottoms area near Brownsville, Minnesota, addressed one of the most significant consequences of river impoundment: the creation of a wide, shallow, lake-like environment. The 4,000-acre backwater suffered from a wind fetch of over two miles, which generated constant wave action. This energy re-suspended fine bottom sediments, leading to extremely high turbidity that blocked sunlight, prevented the growth of vital submerged aquatic vegetation (SAV), and eroded the few remaining natural shorelines. The primary goal was to re-engineer the geomorphology of the pool to reduce wave energy, improve water clarity, and spur the large-scale recovery of the aquatic ecosystem.
+
+**Integrated Feature Application in Detail:**
+This project is a classic example of geomorphic restoration centered on the beneficial use of dredged material. The foundational activity was a large-scale **Dredge Event**, which sourced over 1.5 million cubic yards of clean sand during routine maintenance of the 9-foot navigation channel. This material was then transported and strategically placed to construct a complex of 17 new **Islands**. The curvilinear, naturalistic layout of these islands was precisely guided by a detailed **Island Line** survey plan, which provided the exact coordinates for construction crews to place material accurately and create the desired footprint.
+
+The immediate stability of these new sand landforms was critical. To prevent their immediate erosion by the very forces they were designed to block, their exposed, windward shores were armored with a heavy rock **Revetment**. This involved placing thousands of tons of Class III riprap over a durable geotextile fabric, creating a resilient shield against wave attack that was essential for the project's long-term survival.
+
+Once the physical forms were stable, a massive **Flora Planting or Seeding** effort transformed the sterile sand into living habitat. On the highest elevations of the islands, designed to be above the 2-year flood frequency, over 80,000 hardwood trees—including species like swamp white oak, river birch, and pecan—were planted to initiate a floodplain forest. On the lower, marshy benches and shorelines, the substrate was seeded with native grasses and forbs to create a diverse emergent **Wetland** fringe, providing both erosion control and valuable habitat.
+
+The project's success was profound. In the protected zones behind the islands, water clarity improved from inches to several feet. This triggered a massive resurgence of SAV, with coverage increasing by hundreds of acres. This, in turn, created a rich nursery and foraging habitat for fish and invertebrates, and a major feeding area for migratory waterfowl. To manage the area and inform the public, numerous **Signs** were installed. These include kiosks at public access points explaining the project's success and "Slow No Wake Zone" buoys to protect the fragile, newly established vegetation from boat wakes.
+
+---
+
+### **Case Study 2: The Weaver Bottoms (Pool 5) HREP - Large-Scale Drawdown and Geomorphic Control**
+
+**Project Context and Goal:** The Weaver Bottoms project in Pool 5 was another massive HREP aimed at restoring a 4,000-acre backwater that had degraded into a wide, shallow lake with almost no vegetation. Like Pool 8, it suffered from immense wind and wave action. The project had a dual goal: first, to reduce wave energy through physical barriers, and second, to stimulate the germination of the dormant but viable native seed bank that lay buried in the riverbed sediments, a process that required physically dewatering a vast area of the Mississippi River.
+
+**Integrated Feature Application in Detail:**
+This complex project combined geomorphic construction with large-scale hydraulic manipulation. Similar to Pool 8, a major **Dredge Event** sourced material for the construction of several new **Islands**, including a large, crescent-shaped island, to break up wave fetch and create sheltered zones. However, the most innovative component was a large-scale, partial **drawdown** of the backwater. This was a significant engineering challenge that required modifying existing **Water Control Structures** at the outlet of the backwater to release water faster than it was entering. To facilitate the dewatering of such a vast area, targeted **Dredging** was also performed to create deeper **Flow Channels** that would act as drainage arteries, ensuring the entire area could dewater effectively as the main pool level was lowered.
+
+The drawdown exposed thousands of acres of mudflats for an entire growing season. This had two key ecological effects: first, it allowed the wet, mucky sediment to dewater and consolidate, creating a firmer substrate. Second, and more importantly, the combination of sunlight and air stimulated the germination of a massive seed bank of native aquatic plants (like wild celery and arrowhead) that had been dormant in the sediment for years. When the area was slowly reflooded the following year, a lush and diverse plant community emerged, transforming the "dead lake" back into a productive marsh. The newly constructed islands, protected by **Revetments**, provided the long-term wave protection necessary to ensure this newly established vegetation would persist.
+
+---
+
+### **Case Study 3: The Swan Lake HREP - Active Management through Complex Infrastructure**
+
+**Project Context and Goal:** The Swan Lake HREP, a vast 10,000-acre floodplain complex on the Illinois River, is one of the most ambitious examples of active habitat management. The site had become disconnected from natural flood pulses, and its wetlands were degraded. The primary goal was to restore a highly productive mosaic of wetland habitats by giving resource managers the ability to control water levels with absolute precision, completely independent of the unpredictable and often ill-timed fluctuations of the river.
+
+**Integrated Feature Application in Detail:**
+This project is a masterclass in the integration of supporting infrastructure to achieve an ecological goal. The project's core is a series of large **Moist Soil Management Units (MSUs)**. This first required the construction of miles of new **Embankments**, whose alignment was precisely dictated by an **Embankment Centerline**. The design was a major geotechnical challenge, requiring extensive soil analysis from data collected at dozens of **Borehole Points** to ensure the embankments would be stable on the soft, alluvial floodplain soils.
+
+The ability to manage water is enabled by several key features. Large, cast-in-place concrete **Water Control Structures**, fitted with removable stoplogs, were built into the embankments. Because gravity flow was insufficient, several large **Pump Stations** were constructed, with a combined capacity of over 300 cubic feet per second. This immense power gives managers the ability to fill the vast wetland units from the river in the fall or, critically, to dewater them after an unseasonal summer flood to save the growing food crop.
+
+This operational infrastructure required an equally complex network of utilities and access. A robust electrical grid was installed, consisting of miles of buried armored cable (**Electrical Utility Segments**) that run along the levee crests. These segments connect the main power grid to the **Electrical Utility Nodes**—the transformers and motor control panels—located at each remote pump station. A water conveyance network, composed of large-diameter HDPE pipes (**Water Utility Segments**) and large, wheel-operated gate valves (**Water Utility Nodes**), moves the massive volumes of water from the pumps to the various wetland cells.
+
+None of this would be possible to build, operate, or maintain without physical access. The project included the construction of several miles of **Road Segments** on the crests of the main embankments. These roads were surfaced with a thick **Pavement Section** of compacted aggregate, specifically designed to support the weight of heavy vehicles like cranes and excavators needed for long-term maintenance. The entire construction process was guided by a **Feature Stationing** system, which provided a linear "address" for every component, allowing for the precise placement of every culvert, pump, and water control structure along the project's miles of embankments.
+
+---
+
+### **Case Study 4: Restoring Connectivity and Complexity - Peoria Lake, Pool 12, and Big Timber HREPs**
+
+**Project Context and Goal:** Many HREPs are not about large-scale geomorphic change but instead focus on more surgical interventions to restore depth, flow, and habitat complexity in degraded backwaters and side channels that have become choked with sediment and cut off from the main river.
+
+**Integrated Feature Application in Detail:**
+At the **Peoria Lake HREP**, the foundational activity was a **Dredge Event** that removed over 1.3 million cubic yards of sediment to excavate deep channels in the sediment-filled lake. Because the dredged material was fine-grained silt, it was unsuitable for island building and was instead pumped to a designated **Dredge Placement** site—an adjacent upland containment area where it could be safely dewatered. To bring the newly dredged pools to life, a new **Flow Channel** was excavated to connect them to the main river, providing a constant supply of fresh water. Within these pools, **Fish Structures**, including rock piles and anchored logs, were placed to provide immediate habitat complexity for the local fishery.
+
+In **Pool 12** of the Mississippi River, the focus was on restoring flow to side channels cut off by historic **Riverine Flow Structures** (rock wing dikes). Rather than removing the dikes, a more targeted approach was taken. A **Notch**, typically 30-50 feet wide, was cut into each dike. The design and placement of these notches were guided by a **Riverine Flow Structure Line** survey plan to ensure they captured the right amount of flow. This allowed a controlled portion of the river's current to pass through, scouring the side channel and restoring a healthy, flowing environment without compromising the navigation function of the main channel.
+
+Finally, at the **Big Timber HREP** in Pool 17, managers faced a different problem: the water in the adjacent Mississippi River channel was often too turbid and nutrient-laden to be desirable for their managed wetland. To overcome this, the project included the installation of a high-capacity **Well**. This feature drills deep into the alluvial aquifer to provide a source of clean, clear, sediment-free groundwater. The well gives managers a critical tool to fill the wetland with high-quality water, allowing them to achieve their vegetation goals even when the river itself is not a suitable water source.

@@ -1,0 +1,621 @@
+---
+title: "Water Control Structure"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Point or Polygon (Water_Control_Structure_Location).
+
+* Spatial Delineation: Footprint encompassing reinforced concrete headwalls, drop inlets, culvert barrels, slide gates, stoplog bays, and energy dissipation aprons.
+
+* Structural Typology: Gravity flow stoplog structures, flap-gated culverts, screw-jack sluice gates, and radial gates.
+
+### Primary Restoration & Engineering Objectives
+* Water Surface Regulation: Provide bi-directional water-level control across moist soil cells, backwater lakes, and floodplain basins.
+
+* Bi-directional Flow Management: Retain managed pools during low river stages, permit rapid gravity drainage, and allow controlled gravity inflow during high-water pulses.
+
+* Fish Passage Control: Incorporate low-velocity bays or operational settings that permit native fish ingress while blocking rough fish (common carp).
+
+### Typical Structural & Hydraulic Engineering Criteria
+* Stoplog Bays: Multi-bay reinforced concrete structures (4 to 6 ft bay widths) with embedded stainless steel or aluminum slide channels housing treated timber or structural aluminum stoplogs.
+
+* Culvert Barrels: Heavy-duty reinforced concrete pipe (RCP) or structural aluminum/HDPE conduits (24 to 48 in diameter) passing through embankment bodies.
+
+* Seepage Cutoff Collars: Minimum of two concrete anti-seep collars or bentonite cutoff rings placed around culvert barrels within the embankment core to prevent internal seepage piping.
+
+* Scour Dissipation Aprons: Concrete stilling basins or Class III riprap aprons underlain by geotextile at structure outlets to absorb exit velocities (v>5.0 ft/s).
+
+### Construction & Implementation Methodology
+* Cast-in-Place Concrete Construction: Structural concrete engineered with minimum 28-day compressive strengths of f c′ ≥4,000 psi and air-entrainment (5% to 8%) for extreme freeze-thaw durability.
+
+* Sheetpile Cutoff Walls: Steel sheetpile cutoff walls driven 10 to 20 ft beneath concrete aprons to prevent under-seepage and structural piping.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Stoplog Seal Integrity: Annual inspection of stoplog rubber seals, lifting tracks, and slide gate screw-jacks. Lubrication of gear assemblies and clearing of silt accumulation within stoplog guide slots.
+
+## Spatial Features Attributes
+### Definition
+Water control structures are structures within a water management system that convey water, control the direction or rate of flow, maintain a desired water surface elevation, or measure water levels or flows.
+
+### Purpose
+Water control structures are used to regulate water levels, flow rates, and distribution within managed areas such as MSMUs, backwater lakes, and wetlands. They can be used to maintain or increase water depths to create open water areas, periodically drain or flood wetlands to enhance plant germination, and provide operational flexibility to meet multiple habitat objectives (e.g., for waterfowl, shorebirds, wading birds, reptiles, amphibians, and fisheries).
+
+### Applicability
+Water control structures are applicable wherever active water level or flow management is required in Upper Mississippi River System (UMRS) restoration projects. They are commonly used to manage wetlands, backwaters, and managed floodplain units, and are integral components of water level management strategies implemented under HREP/UMRR projects. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+### WaterControlStructure
+(point) – A structure designed to control the flow of water from the interior of an embankment to the waterside or from the waterside to the interior.
+
+![](images/watercontrolstructure.jpg){width=75%}
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>ControlMethod</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>StructureCapacityCFS</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>LengthFT</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>DiameterIN</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>StructureMaterial</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>InletInvertElevation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>OutletInvertElevation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>BarrelNumber</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>OperationType</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>StructureType</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>BottomElevation</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Width</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Height</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Station</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>mediaIDFK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Water Level Management</td>
+      <td>Measures taken to imitate natural low flow river conditions with the goal of improving wetland habitats.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gravity Drain</td>
+      <td>Gravity drain feature consisting of a discharge pipe and an opening/closing mechanism, used to introduce or remove water from a MSMU or backwater lake.</td>
+    </tr>
+    <tr>
+      <td>Inlet Structure</td>
+      <td>Large structure, generally concrete, used to allow large amounts of water into a MSMU or backwater area.</td>
+    </tr>
+    <tr>
+      <td>Outlet Structure</td>
+      <td>Large structure, generally concrete, used to allow large amounts of water out of a MSMU or backwater area.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, it will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature.
+
+### RestorFeatVdatum
+Vertical datum of elevations recorded in the attribute table or used as feature z values.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other, note datum in sdsFeatureDescription</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum</td>
+    </tr>
+  </tbody>
+</table>
+
+### ControlMethod
+The type of flow control used.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Flap Gate</td>
+      <td>Top-hinged gate, can be manually or automatically operated.</td>
+    </tr>
+    <tr>
+      <td>Gate Wells</td>
+      <td>Concrete enclosure used to house a manually operated drain closure valve or another device.</td>
+    </tr>
+    <tr>
+      <td>Sluice Gate</td>
+      <td>Gate lowered into place, generally using a threaded stem system, operated manually or automatically.</td>
+    </tr>
+    <tr>
+      <td>Flap gate and sluice gate</td>
+      <td>Combination flap and sluice gate.</td>
+    </tr>
+    <tr>
+      <td>Stoplog</td>
+      <td>Stoplog structure.</td>
+    </tr>
+    <tr>
+      <td>Weir Gate</td>
+      <td>Gate that slides down to allow water to flow over the top of the gate.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other gate type; specify in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Not applicable.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Control method unknown.</td>
+    </tr>
+  </tbody>
+</table>
+
+### StructureCapacityCFS
+Design capacity of the structure in cubic feet per second (CFS).
+
+### LengthFT
+Length of the gravity drain or pipe in feet.
+
+### DiameterIN
+Diameter of the drainpipe in inches.
+
+### StructureMaterial
+Material the structure (typically barrel/pipe) is made of.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aluminum</td>
+      <td>Aluminum pipe.</td>
+    </tr>
+    <tr>
+      <td>Concrete</td>
+      <td>Concrete pipe.</td>
+    </tr>
+    <tr>
+      <td>Fiberglass</td>
+      <td>Fiberglass pipe.</td>
+    </tr>
+    <tr>
+      <td>Steel</td>
+      <td>Steel pipe.</td>
+    </tr>
+    <tr>
+      <td>PVC</td>
+      <td>Polyvinyl chloride pipe.</td>
+    </tr>
+    <tr>
+      <td>Corrugated metal</td>
+      <td>Corrugated metal pipe.</td>
+    </tr>
+    <tr>
+      <td>Copper</td>
+      <td>Copper pipe.</td>
+    </tr>
+    <tr>
+      <td>HDPE</td>
+      <td>High density polyethylene pipe.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other material; specify in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Not applicable.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Material unknown.</td>
+    </tr>
+  </tbody>
+</table>
+
+### InletInvertElevation
+Elevation of the inlet invert (inside bottom) of the structure, referenced to RestorFeatVdatum.
+
+### OutletInvertElevation
+Elevation of the outlet invert (inside bottom) of the structure, referenced to RestorFeatVdatum.
+
+### BarrelNumber
+Number of barrels, if the gravity drain is a multi-barrel drain.
+
+### OperationType
+Type of operation required for gate closing or opening.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Manual</td>
+      <td>Manual operation required.</td>
+    </tr>
+    <tr>
+      <td>Automatic</td>
+      <td>Automatic operation required.</td>
+    </tr>
+    <tr>
+      <td>Both</td>
+      <td>Manual and automatic operation can be used.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Operation unknown.</td>
+    </tr>
+    <tr>
+      <td>NA</td>
+      <td>Not applicable.</td>
+    </tr>
+  </tbody>
+</table>
+
+### StructureType
+Type of water control structure.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pipe</td>
+      <td>Pipe-type structure.</td>
+    </tr>
+    <tr>
+      <td>Gate</td>
+      <td>Gate structure (non-pipe).</td>
+    </tr>
+    <tr>
+      <td>Box Culvert</td>
+      <td>Box culvert (non-pipe).</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other structure type; specify in sdsFeatureDescription.</td>
+    </tr>
+  </tbody>
+</table>
+
+### BottomElevation
+Bottom elevation of non-pipe type structures, referenced to RestorFeatVdatum.
+
+### Width
+Width of non-pipe type structures in feet.
+
+### Height
+Height of non-pipe type structures in feet.
+
+### Station
+Stationing of the feature, typically referenced to a project baseline or alignment (e.g., 10+00).
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., structure details, as-built drawings, photographs) documenting the water control structure.

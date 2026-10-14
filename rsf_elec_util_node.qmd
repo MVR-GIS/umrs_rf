@@ -1,0 +1,431 @@
+---
+title: "Electrical Utility Node"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+## Spatial & Geometric Definition
+* Geometry Type: Point (Electrical_Utility_Node).
+
+* Spatial Delineation: Point locations representing electrical infrastructure components powering restoration projects.
+
+* Component Types: Step-down transformers, primary utility metering poles, service disconnect panels, automatic transfer switches (ATS), backup diesel generators, motor control centers (MCC), and SCADA telemetry panels.
+
+### Primary Engineering & Operational Objectives
+* Power Supply & Conditioning: Deliver and step down commercial high-voltage power (480V, 3-phase) to operational voltage for high-capacity axial pumps, gate actuators, and lighting.
+
+* Automated System Control: House Programmable Logic Controllers (PLCs) and variable-frequency drives (VFDs) governing automated pumping regimes based on water level sensors.
+
+* Emergency Redundancy: Provide automatic generator startup within 10 seconds of commercial utility grid failure to protect facilities during flood events.
+
+### Technical & Electrical Engineering Specifications
+* Enclosure Standards: NEMA 4X stainless steel or heavy marine-grade aluminum enclosures to resist river corridor corrosion and moisture.
+
+* Elevated Platforms: All electrical equipment, MCCs, and generators mounted on structural steel platforms elevated minimum 2.0 to 3.0 ft above the 100-year Base Flood Elevation (BFE).
+
+* Surge & Lightning Protection: Industrial metal-oxide varistor (MOV) surge protection devices (SPDs) and copper grounding rod grids tied to all metallic structures.
+
+### Construction & Implementation Methodology
+* Utility Coordination: Point-of-service coordination with local commercial power utilities, extending single-phase or three-phase overhead/underground feeders to project boundaries.
+
+* Commissioning: Full load-bank testing of transformers and standby generators, megger testing of insulation on all pump motor leads, and telemetry testing with central control stations.
+
+### Quality Control, Inspection & Long-Term Maintenance
+* Infrared Thermography Scans: Annual thermal imaging scans of electrical panels under full pumping loads to detect hot spots, loose connections, or failing breaker contacts.
+
+## Spatial Feature Attributes
+### Definition
+An Electrical Utility Node is a point feature representing a subdivision of an electrical distribution network, specifically an asset that participates in the transmission, transformation, measurement, or control of electricity but is not a line. Examples include transformers, fuses, generators, meters, and switches.
+
+### Purpose
+Electrical utility nodes are used to document and manage key components of the electrical distribution system that control, transform, or monitor electrical power. Mapping these nodes supports design coordination, safety and clearance reviews, maintenance planning, outage management, and protection of electrical infrastructure during restoration project construction and operations.
+
+### Applicability
+Electrical utility nodes are applicable wherever electrical distribution infrastructure intersects, serves, or is affected by Upper Mississippi River System (UMRS) restoration projects. Typical applications include documenting power feeds and components at project facilities, structures, pump stations, and control sites, as well as mapping utility assets that may constrain or influence design and construction activities. (UMRR Design Handbook, 2012)
+
+### Notes
+Restoration features now have a Program_UID field to distinguish between NESP and UMRR features. Aliases without program identification will be created for any field that currently has UMRR in the name, so they can be used for NESP or UMRR data.
+
+Attribute criteria for each field includes the following:
+
+* Attribute Status – defines whether the field requires a value or if it is optional based on available information.
+* Phases – indicates the earliest time in the project lifecycle values for this attribute are available.
+* Digitizing requirements – indicates when the field value should be entered in the attribute table.
+
+Geometry Note: No Z values are needed for this feature.
+
+### ElectricalUtilityNode
+(point) – A subdivision of an electrical distribution network, particularly an asset that participates in the transmission of electricity but is not a line (e.g., transformer, fuse, generator, meter, switch).
+
+---
+
+## Feature Attribute Criteria
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Attribute</th>
+      <th>Attribute Status</th>
+      <th>Phase</th>
+      <th>Digitizing Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Program_UID</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PROJECT_ID (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Type (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Subtype (Alias)</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RestorFeatStatus</td>
+      <td>Required</td>
+      <td>Feasibility</td>
+      <td>At feature creation</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>sdsFeatureName</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>sdsFeatureDescription</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>RestorFeatVdatum</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>electricalSegmentType</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>OperationStatus</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>realPropertySiteUniqueID</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>realPropertyNetworkUniqueID</td>
+      <td>Optional</td>
+      <td>Design</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>propertyCodeID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>sdsMetaDataID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>RestorFeatIDPK</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>sdsID</td>
+      <td>Optional</td>
+      <td>Construction</td>
+      <td>As required and available</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Parameters
+
+### Program_UID
+Designate program NESP or UMRR.
+
+### Project_ID (alias: PROJECT_ID)
+Foreign key to the unique NESP/UMRR project ID.
+
+### Type (alias: Restoration_Type)
+A broad classification used to group NESP/UMRR restoration features into categories of similar function.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Restoration_Type</td>
+      <td>Support feature.</td>
+    </tr>
+  </tbody>
+</table>
+
+### SubType (alias: Subtype)
+A classification used to group NESP/UMRR restoration features into specific design feature categories.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ElectricalUtility</td>
+      <td>Electrical utility.</td>
+    </tr>
+  </tbody>
+</table>
+
+### RestorFeatStatus
+A description of the status of the individual restoration. It also includes the party responsible for the individual feature.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USACE Planned</td>
+      <td>Feature is in a USACE planning stage.</td>
+    </tr>
+    <tr>
+      <td>USACE Built</td>
+      <td>Feature has been built by USACE. If a feature has been planned and built by USACE, once constructed, will always be considered USACE built even if it has been repaired under later project stages.</td>
+    </tr>
+    <tr>
+      <td>USACE Enhanced</td>
+      <td>The function of an existing feature that was not built by USACE has been enhanced by a feature that was USACE built or repaired.</td>
+    </tr>
+    <tr>
+      <td>USACE Repaired</td>
+      <td>An existing feature that was not built by USACE has been directly improved or repaired.</td>
+    </tr>
+    <tr>
+      <td>Other Planned</td>
+      <td>A feature that is planned by another organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Built</td>
+      <td>Feature has been built by another organization or government agency and is an integral part of the UMRR project.</td>
+    </tr>
+    <tr>
+      <td>Other Enhanced</td>
+      <td>The function of an existing feature, that was built by another organization or government agency, has been enhanced by a feature that was built or repaired by a non-USACE organization or government agency.</td>
+    </tr>
+    <tr>
+      <td>Other Repaired</td>
+      <td>An existing feature that has been directly improved or repaired by another organization or government agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+### sdsFeatureName
+The common name of the feature.
+
+### sdsFeatureDescription
+A narrative describing the feature, including its electrical function and relationship to nearby structures or facilities.
+
+### RestorFeatVdatum
+Vertical datum of any elevations recorded in the attribute table (if used in related contexts).
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSL 1912</td>
+      <td>Mean Sea Level of 1912.</td>
+    </tr>
+    <tr>
+      <td>NGVD 1929</td>
+      <td>National Geodetic Vertical Datum of 1929.</td>
+    </tr>
+    <tr>
+      <td>NAVD 1988</td>
+      <td>North American Vertical Datum of 1988.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Other; note datum in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Unknown vertical datum.</td>
+    </tr>
+  </tbody>
+</table>
+
+### electricalSegmentType
+Classification of the electrical utility node within the distribution network (based on configuration or function).
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Transformer</td>
+      <td>Device used to step voltage up or down in the distribution network.</td>
+    </tr>
+    <tr>
+      <td>Switch / Breaker</td>
+      <td>Switching or circuit-breaking device used to isolate or reroute electrical circuits.</td>
+    </tr>
+    <tr>
+      <td>Fuse / Protective Device</td>
+      <td>Fuse or other protective device used to interrupt fault currents or protect equipment.</td>
+    </tr>
+    <tr>
+      <td>Meter</td>
+      <td>Metering device used to measure electrical usage or load.</td>
+    </tr>
+    <tr>
+      <td>Generator</td>
+      <td>Local generation unit (e.g., backup generator) connected to the distribution network.</td>
+    </tr>
+    <tr>
+      <td>Junction / Cabinet</td>
+      <td>Junction box, cabinet, or similar node where multiple circuits are connected.</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>Electrical node type not covered above; describe in sdsFeatureDescription.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Node type has not been determined.</td>
+    </tr>
+  </tbody>
+</table>
+
+### OperationStatus
+Operational status of the electrical utility node.
+
+<table class="table-grid">
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Planned</td>
+      <td>Node is proposed but not yet installed or energized.</td>
+    </tr>
+    <tr>
+      <td>Active</td>
+      <td>Node is installed and in normal service.</td>
+    </tr>
+    <tr>
+      <td>De-energized</td>
+      <td>Node is installed but not currently energized.</td>
+    </tr>
+    <tr>
+      <td>Out of Service</td>
+      <td>Node is no longer used for regular electrical service but remains in place.</td>
+    </tr>
+    <tr>
+      <td>Removed</td>
+      <td>Node has been physically removed or abandoned per utility practice.</td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td>Operational status has not been determined.</td>
+    </tr>
+  </tbody>
+</table>
+
+### realPropertySiteUniqueID
+Unique identifier linking the electrical utility node to a specific real property site or installation record in the real property inventory, when applicable.
+
+### realPropertyNetworkUniqueID
+Unique identifier linking the electrical utility node to a network-level real property or asset management record (e.g., regional or enterprise utility asset system), when applicable.
+
+### propertyCodeID
+Code indicating the real property classification or category of the asset (e.g., electrical equipment, transformer, switchgear) as defined by the managing agency’s real property coding system.
+
+### sdsMetaDataID
+References attached metadata.
+
+### RestorFeatIDPK
+Primary key used to uniquely identify the restoration feature record.
+
+### sdsID
+Identifier used to link the feature to supporting SDS (spatial data system) records or related datasets.
+
+### mediaIDFK
+Foreign key used to reference associated media (e.g., photographs, utility plans, manufacturer cut sheets, as-built drawings) documenting the electrical utility node.

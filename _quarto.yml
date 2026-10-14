@@ -1,0 +1,103 @@
+project:
+  type: book
+  output-dir: docs
+
+execute:
+  freeze: true  # This tells Quarto to use cached code results instead of re-running them
+
+book:
+  title: "UMRS Restoration Features"
+
+
+
+
+  date: "2026-21-09"
+  repo-url: "https://github.com/UMRS/Restoration-Features"
+
+  page-navigation: true
+  search: true
+
+
+
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - casestudies.qmd
+    - summary.qmd
+
+    - part: "Restoration Features"
+      chapters:
+        - features.qmd
+        - rf_dredging_event.qmd
+        - rf_embankment.qmd
+        - rf_embankment_cntrln.qmd
+        - rf_fish_struct.qmd
+        - rf_flora_plant_seed.qmd
+        - rf_flowchannel.qmd
+        - rf_island_ln.qmd
+        - rf_island.qmd
+        - rf_mosit_soli_mu.qmd
+        - rf_notch.qmd
+        - rf_pump_station.qmd
+        - rf_revetment.qmd
+        - rf_river_flow_struct.qmd
+        - rf_river_flow_struct_ln.qmd
+        - rf_water_control_struct.qmd
+        - rf_well.qmd
+        - rf_wetland.qmd
+
+    - part: "Restoration Support Features"
+      chapters:
+        - features_support.qmd
+        - rsf_dredge_placement.qmd
+        - rsf_borehole_pts.qmd
+        - rsf_elec_util_node.qmd
+        - rsf_elec_util_seg.qmd
+        - rsf_feat_station.qmd
+        - rsf_pavement_sect.qmd
+        - rsf_road_seg.qmd
+        - rsf_sign.qmd
+        - rsf_water_util_node.qmd
+        - rsf_water_util_seg.qmd
+
+    - part: "Restoration Feature Crosswalk"
+      chapters:
+        - rf_cross_x_nesp.qmd
+        - rf_cross_x_design_hb.qmd
+
+
+    - resources.qmd
+    - references.qmd
+
+
+  sidebar:
+    style: "docked"
+    background: light
+  page-footer:
+    left: "Made with love by USACE"
+    background: light
+
+bibliography: packages.bib
+number-depth: 1
+
+  
+format:
+  html:
+    mermaid: 
+      theme: default
+    theme:
+      light: flatly
+      dark: darkly
+    filters: 
+      - quarto
+      - fontawesome
+    respect-user-color-scheme: true
+    css: styles.css
+    lightbox: true
+    number-depth: 0
+  pdf:
+    pdf-engine: xelatex
+    latex-tinytex: true
+    mermaid format: png
+editor: source
+
