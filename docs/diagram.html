@@ -556,8 +556,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#umrs-restoration-features-database-crosswalk-to-umrr-and-nesp-design-terminology" id="toc-umrs-restoration-features-database-crosswalk-to-umrr-and-nesp-design-terminology" class="nav-link active" data-scroll-target="#umrs-restoration-features-database-crosswalk-to-umrr-and-nesp-design-terminology">UMRS Restoration Features Database Crosswalk to UMRR and NESP Design Terminology</a>
+  <ul class="collapse">
+  <li><a href="#umrr" id="toc-umrr" class="nav-link" data-scroll-target="#umrr">UMRR</a></li>
+  <li><a href="#nesp" id="toc-nesp" class="nav-link" data-scroll-target="#nesp">NESP</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -582,6 +592,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="umrs-restoration-features-database-crosswalk-to-umrr-and-nesp-design-terminology" class="level2">
+<h2 class="anchored" data-anchor-id="umrs-restoration-features-database-crosswalk-to-umrr-and-nesp-design-terminology">UMRS Restoration Features Database Crosswalk to UMRR and NESP Design Terminology</h2>
+<p>The UMRS Restoration Features database provides a common geospatial vocabulary for documenting, mapping, and managing ecosystem-restoration features across the Upper Mississippi River System (UMRS). It distinguishes between restoration features—such as DredgingEvent, Island, Wetland, Revetment, RiverineFlowStructure, and MoistSoilMgmtUnits—and restoration support features, such as DredgingPlacement, access infrastructure, utilities, stationing, and investigation points.</p>
+<p>The database’s purpose is to translate varied project-design terminology into a consistent spatial data structure. A single design action may require multiple mapped database features. For example, a notched closure structure may be represented by RiverineFlowStructure or RiverineFlowStructureLine plus a Notch; an island created with dredged material may include DredgingEvent, DredgingPlacement, Island, and, where applicable, Wetland or Embankment.</p>
+<p>This common structure allows UMRR and NESP projects to be mapped, queried, compared, and reported using the same feature classes while preserving each program’s established design terminology. The database does not replace the UMRR Environmental Design Handbook or the NESP Environmental Design Toolkit. Rather, it provides the spatial-data framework that connects their design measures to mapped project components.</p>
+<p>Both programs should use the database feature class as the authoritative mapped term, while retaining the original UMRR or NESP design term as a source attribute, alias, or project-description field.</p>
 <table class="rf-crosswalk">
 <thead>
 <tr>
@@ -811,7 +827,6 @@ Water-management infrastructure
 </tr>
 </tbody>
 </table>
-<p>: UMRR and NESP terminology crosswalk to UMRS restoration-feature database classes. {#tbl-restoration-feature-crosswalk}</p>
 <table class="rf-crosswalk">
 <thead>
 <tr>
@@ -987,9 +1002,38 @@ Water-supply or drainage conveyance
 </tr>
 </tbody>
 </table>
-<p>: UMRR and NESP terminology crosswalk to UMRS restoration-support feature classes and assigned restoration features. {#tbl-restoration-support-feature-crosswalk}</p>
+<section id="umrr" class="level3">
+<h3 class="anchored" data-anchor-id="umrr">UMRR</h3>
+<p>The UMRR Environmental Design Handbook contains detailed terminology for Habitat Rehabilitation and Enhancement Project (HREP) design, including shoreline and riverbank protection, localized water-level management, dredging, river-training structures and secondary-channel modifications, floodplain restoration, island design, aeration, and tributary restoration.</p>
+<p>UMRR projects can use the database to convert these detailed design terms into standardized spatial features. For example:</p>
+<p>Backwater and secondary-channel dredging can be mapped as DredgingEvent and, when an excavated channel remains, FlowChannel.</p>
+<p>Dredged material used for island construction, wetlands, or topographic diversity can be mapped as DredgingPlacement and linked to Island, Wetland, or Embankment.</p>
+<p>Closure structures, dikes, weirs, chevrons, wing dams, vanes, and rock sills can be mapped as RiverineFlowStructure or RiverineFlowStructureLine.</p>
+<p>Wing-dam notches and notched closures can be mapped as Notch in association with the applicable riverine flow structure.</p>
+<p>Shoreline protection and rock revetment can be mapped as Revetment.</p>
+<p>Moist Soil Management Units can be mapped as MoistSoilMgmtUnits, with related Embankment, WaterControlStructure, PumpStation, Well, and water-utility support features.</p>
+<p>Reforestation, wetland-species planting, and floodplain vegetation establishment can be mapped as FloraPlantingOrSeeding.</p>
+<p>Depressional, emergent, and restored wetlands can be mapped as Wetland.</p>
+<p>Barrier islands, seed islands, and other constructed islands can be mapped as Island or IslandLine, based on the project’s spatial representation.</p>
+<p>Using the database allows UMRR to retain its detailed HREP design history while creating consistent feature-level mapping across projects, pools, reaches, and districts. It also supports analysis of where and how UMRR has implemented individual restoration measures over time. The UMRR handbook specifically recognizes that HREPs often combine multiple techniques to address complex habitat problems; the database captures those combinations as related mapped features instead of forcing the project into one broad label.</p>
+</section>
+<section id="nesp" class="level3">
+<h3 class="anchored" data-anchor-id="nesp">NESP</h3>
+<p>The NESP Environmental Design Toolkit provides planning-level design tools for five principal restoration-feature groups: shoreline stabilization, dredging, river-training structures and secondary-channel modifications, floodplain restoration, and islands. The toolkit uses design pamphlets, drawings, and parametric-cost tools to support early feature identification, alternative development, and plan formulation.</p>
+<p>NESP projects can use the database to map proposed and constructed project components consistently with UMRR while retaining NESP’s planning and design terminology. For example:</p>
+<p>Shoreline stabilization features, including rock revetments and related protective structures, can be mapped as Revetment.</p>
+<p>Dredge cuts, fish-habitat dredging, and access dredging can be mapped as DredgingEvent; excavated conveyance areas can also be mapped as FlowChannel.</p>
+<p>Beneficial use of dredged material, including placement for islands, berms, ridge-and-swale topography, or thin-layer placement, can be mapped as DredgingPlacement.</p>
+<p>Chevrons, bullnoses, closure structures, guide structures, flow-diversion structures, and other river-training measures can be mapped as RiverineFlowStructure or RiverineFlowStructureLine.</p>
+<p>Notched structures can be mapped as Notch and linked to the associated riverine flow structure.</p>
+<p>Woody bundles and anchored or locked logs can be mapped as FishStructure when fish habitat is their primary purpose, or as a riverine flow structure when their primary purpose is flow or sediment management.</p>
+<p>Potholes, depressional wetlands, emergent wetlands, and vegetation features can be mapped as Wetland and FloraPlantingOrSeeding.</p>
+<p>Narrow islands, wide islands, rock-ring islands, seed islands, islands with berms, and islands with emergent wetlands can be mapped as Island, IslandLine, and associated Embankment or Wetland features.</p>
+<p>The database gives NESP a consistent mechanism to carry planning-level feature concepts into design, mapping, cost estimating, project documentation, and future performance evaluation. NESP explicitly builds on information from prior UMRS projects and the UMRR Environmental Design Handbook; using the same spatial feature vocabulary supports that continuity.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
