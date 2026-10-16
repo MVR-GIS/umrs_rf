@@ -68,7 +68,7 @@ Geometry Note: Points should have well top elevation as Z value if available.
 ### Revetment
 (polygon) – An area faced with stone or other material along the shoreline designed to stabilize the bank or protect it from erosion.
 
-![](images/revetment.jpg){width=75%}
+![](images/riverbankrevetment.jpg){width=75%}
 ---
 
 

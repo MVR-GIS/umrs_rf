@@ -15,3 +15,45 @@
 .quarto-dark .table-grid td {
   border-color: white;
 }
+
+.rf-crosswalk {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.90rem;
+  margin-bottom: 1.5rem;
+}
+
+.rf-crosswalk th,
+.rf-crosswalk td {
+  border: 1px solid #B7B7B7;
+  padding: 0.45rem 0.60rem;
+  vertical-align: top;
+}
+
+.rf-crosswalk th {
+  background: #062d53;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-align: center;
+}
+
+.rf-crosswalk td.database {
+  background: #6e916e;
+  color: #FFFFFF;
+  font-weight: 800;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.rf-crosswalk tr.group td {
+  background: #e3fcd8;
+  color: #1F1F1F;
+  font-weight: 800;
+  text-align: left;
+}
+
+.rf-crosswalk code {
+  color: inherit;
+  background: transparent;
+  font-weight: 800;
+}

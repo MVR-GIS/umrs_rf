@@ -1,0 +1,244 @@
+---
+title: "Crosswalk"
+format: 
+  html:
+    lightbox:
+      match: auto
+      desc-position: top
+      loop: true
+    css: styles.css
+
+---
+
+<table class="rf-crosswalk">
+  <thead>
+    <tr>
+      <th>UMRR HANDBOOK TERM(S)</th>
+      <th>UMRS RESTORATION FEATURE</th>
+      <th>NESP TOOLKIT TERM(S)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr class="group">
+      <td colspan="3">DREDGING AND CHANNEL RESTORATION</td>
+    </tr>
+
+    <tr>
+      <td>Backwater dredging;<br>backwater dredge cut;<br>secondary-channel dredge cut;<br>environmental dredging</td>
+      <td class="database"><code>DredgingEvent</code></td>
+      <td>Dredging;<br>dredging for fish habitat;<br>dredging for access;<br>dredge cut</td>
+    </tr>
+
+    <tr>
+      <td>Secondary-channel cut;<br>channel restoration;<br>restored secondary channel</td>
+      <td class="database"><code>FlowChannel</code></td>
+      <td>Dredge cut;<br>dredging for fish habitat</td>
+    </tr>
+
+    <tr class="group">
+      <td colspan="3">SHORELINE, RIVER-TRAINING, AND FISH FEATURES</td>
+    </tr>
+
+    <tr>
+      <td>Shoreline and riverbank protection;<br>rock revetment;<br>off-bankline revetment;<br>root-wad revetment</td>
+      <td class="database"><code>Revetment</code></td>
+      <td>Shoreline stabilization;<br>rock revetment;<br>offshore rock mound</td>
+    </tr>
+
+    <tr>
+      <td>Closure structure;<br>rock closure;<br>wing dam;<br>closing dam;<br>dike;<br>weir;<br>chevron;<br>vane;<br>rock sill;<br>flow-diversion structure</td>
+      <td class="database"><code>RiverineFlowStructure</code></td>
+      <td>River-training structure;<br>closure structure;<br>chevron;<br>bullnose;<br>guide structure;<br>flow-diversion structure</td>
+    </tr>
+
+    <tr>
+      <td>Closure alignment;<br>dike alignment;<br>wing-dam alignment;<br>chevron alignment;<br>vane alignment</td>
+      <td class="database"><code>RiverineFlowStructureLine</code></td>
+      <td>River-training-structure alignment;<br>closure-structure alignment</td>
+    </tr>
+
+    <tr>
+      <td>Wing-dam notch;<br>notched closure structure;<br>low-flow notch</td>
+      <td class="database"><code>Notch</code></td>
+      <td>Notched structure;<br>RTS-notching</td>
+    </tr>
+
+    <tr>
+      <td>Fish LUNKER;<br>boulder cluster;<br>woody debris;<br>wood-pile structure</td>
+      <td class="database"><code>FishStructure</code></td>
+      <td>Woody bundle;<br>anchored or locked log</td>
+    </tr>
+
+    <tr class="group">
+      <td colspan="3">FLOODPLAIN, WETLAND, AND VEGETATION FEATURES</td>
+    </tr>
+
+    <tr>
+      <td>Depressional wetland;<br>emergent wetland;<br>restored wetland;<br>wetland habitat</td>
+      <td class="database"><code>Wetland</code></td>
+      <td>Potholes and depressional wetlands;<br>emergent wetland;<br>topo-wetlands;<br>island with emergent wetland</td>
+    </tr>
+
+    <tr>
+      <td>Reforestation;<br>wetland-species planting;<br>floodplain forest planting;<br>grass, sedge, rush, and forb planting</td>
+      <td class="database"><code>FloraPlantingOrSeeding</code></td>
+      <td>Tree planting;<br>vegetation</td>
+    </tr>
+
+    <tr>
+      <td>Exterior berm;<br>interior berm;<br>water-management embankment</td>
+      <td class="database"><code>Embankment</code></td>
+      <td>Topo-berm;<br>island with berm</td>
+    </tr>
+
+    <tr>
+      <td>Berm or embankment alignment</td>
+      <td class="database"><code>EmbankmentCenterline</code></td>
+      <td>Berm alignment</td>
+    </tr>
+
+    <tr class="group">
+      <td colspan="3">ISLAND FEATURES</td>
+    </tr>
+
+    <tr>
+      <td>Island creation;<br>barrier island;<br>seed island;<br>log-rock structure;<br>mud flat;<br>sand flat;<br>turtle nesting mound;<br>delta formation</td>
+      <td class="database"><code>Island</code></td>
+      <td>Island;<br>narrow island;<br>wide island;<br>rock-ring island;<br>island with berm;<br>island with emergent wetland;<br>seed island</td>
+    </tr>
+
+    <tr>
+      <td>Island alignment;<br>barrier-island alignment;<br>shoreline-protection alignment</td>
+      <td class="database"><code>IslandLine</code></td>
+      <td>Island alignment</td>
+    </tr>
+
+    <tr class="group">
+      <td colspan="3">WATER-LEVEL-MANAGEMENT FEATURES</td>
+    </tr>
+
+    <tr>
+      <td>Moist Soil Management Unit;<br>managed backwater lake;<br>water-level-management unit</td>
+      <td class="database"><code>MoistSoilMgmtUnits</code></td>
+      <td>No dedicated NESP primary feature term</td>
+    </tr>
+
+    <tr>
+      <td>Overflow spillway;<br>stoplog structure;<br>gated structure;<br>water-level-control structure</td>
+      <td class="database"><code>WaterControlStructure</code></td>
+      <td>Water-control component</td>
+    </tr>
+
+    <tr>
+      <td>Pump station;<br>water-level-management pump</td>
+      <td class="database"><code>PumpStation</code></td>
+      <td>Water-management infrastructure</td>
+    </tr>
+
+    <tr>
+      <td>Water-management well;<br>water-supply well</td>
+      <td class="database"><code>Well</code></td>
+      <td>Water-management infrastructure</td>
+    </tr>
+  </tbody>
+</table>
+
+: UMRR and NESP terminology crosswalk to UMRS restoration-feature database classes. {#tbl-restoration-feature-crosswalk}
+
+<table class="rf-crosswalk">
+  <thead>
+    <tr>
+      <th>UMRR HANDBOOK TERM(S) OR SUPPORT ACTIVITY</th>
+      <th>UMRS RESTORATION SUPPORT FEATURE</th>
+      <th>NESP TOOLKIT TERM(S) OR SUPPORT ACTIVITY</th>
+      <th>ASSIGNED RESTORATION FEATURE(S)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr class="group">
+      <td colspan="4">DREDGED-MATERIAL MANAGEMENT</td>
+    </tr>
+
+    <tr>
+      <td>Dredged-material placement;<br>beneficial use of dredged material;<br>material placement for islands or topographic diversity</td>
+      <td class="database"><code>DredgingPlacement</code></td>
+      <td>Beneficial use of dredged material;<br>topo-berms;<br>ridge and swale;<br>thin-layer placement</td>
+      <td><code>DredgingEvent</code>;<br><code>Island</code>;<br><code>Wetland</code>;<br><code>Embankment</code></td>
+    </tr>
+
+    <tr class="group">
+      <td colspan="4">DESIGN, INVESTIGATION, AND CONSTRUCTION SUPPORT</td>
+    </tr>
+
+    <tr>
+      <td>Soil samples;<br>borrow-area investigation;<br>geotechnical investigation</td>
+      <td class="database"><code>BoreholePoint</code></td>
+      <td>Material investigation;<br>site investigation</td>
+      <td><code>DredgingEvent</code>;<br><code>Embankment</code>;<br><code>Island</code>;<br><code>RiverineFlowStructure</code></td>
+    </tr>
+
+    <tr>
+      <td>Survey point;<br>construction reference point;<br>feature stationing</td>
+      <td class="database"><code>FeatureStationing</code></td>
+      <td>Drawing reference point;<br>design reference point</td>
+      <td>All engineered restoration features, as applicable</td>
+    </tr>
+
+    <tr>
+      <td>Access pad;<br>paved staging area;<br>construction surface</td>
+      <td class="database"><code>PavementSection</code></td>
+      <td>Access using stone structure;<br>construction staging surface</td>
+      <td><code>DredgingEvent</code>;<br><code>Island</code>;<br><code>Embankment</code>;<br><code>RiverineFlowStructure</code></td>
+    </tr>
+
+    <tr>
+      <td>Construction access road;<br>project access route</td>
+      <td class="database"><code>RoadSegment</code></td>
+      <td>Project access route;<br>construction access</td>
+      <td><code>DredgingEvent</code>;<br><code>Island</code>;<br><code>Embankment</code>;<br><code>RiverineFlowStructure</code></td>
+    </tr>
+
+    <tr>
+      <td>Navigation sign;<br>safety sign;<br>project-information sign</td>
+      <td class="database"><code>Sign</code></td>
+      <td>Navigation sign;<br>safety sign;<br>project-information sign</td>
+      <td>All restoration features, as applicable</td>
+    </tr>
+
+    <tr class="group">
+      <td colspan="4">ELECTRICAL AND WATER-MANAGEMENT SUPPORT</td>
+    </tr>
+
+    <tr>
+      <td>Electrical equipment supporting pumps or water-control systems</td>
+      <td class="database"><code>ElectricalUtilityNode</code></td>
+      <td>Electrical equipment supporting pumps or water-control systems</td>
+      <td><code>PumpStation</code>;<br><code>WaterControlStructure</code></td>
+    </tr>
+
+    <tr>
+      <td>Electrical connection supporting pumps or water-control systems</td>
+      <td class="database"><code>ElectricalUtilitySegment</code></td>
+      <td>Electrical connection supporting pumps or water-control systems</td>
+      <td><code>PumpStation</code>;<br><code>WaterControlStructure</code></td>
+    </tr>
+
+    <tr>
+      <td>Valve;<br>intake;<br>outlet;<br>fitting;<br>pump connection</td>
+      <td class="database"><code>WaterUtilityNode</code></td>
+      <td>Water-control utility component</td>
+      <td><code>MoistSoilMgmtUnits</code>;<br><code>PumpStation</code>;<br><code>WaterControlStructure</code></td>
+    </tr>
+
+    <tr>
+      <td>Water-supply pipe;<br>drainage pipe;<br>pump-discharge pipe</td>
+      <td class="database"><code>WaterUtilitySegment</code></td>
+      <td>Water-supply or drainage conveyance</td>
+      <td><code>MoistSoilMgmtUnits</code>;<br><code>PumpStation</code>;<br><code>WaterControlStructure</code></td>
+    </tr>
+  </tbody>
+</table>
+
+: UMRR and NESP terminology crosswalk to UMRS restoration-support feature classes and assigned restoration features. {#tbl-restoration-support-feature-crosswalk}

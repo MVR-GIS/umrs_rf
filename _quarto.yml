@@ -65,7 +65,7 @@ book:
         - rf_cross_x_nesp.qmd
         - rf_cross_x_design_hb.qmd
 
-
+    - diagram.qmd
     - resources.qmd
     - references.qmd
 
@@ -95,8 +95,6 @@ format:
     css: styles.css
     lightbox: true
     number-depth: 0
-  pdf:
-    pdf-engine: xelatex
     latex-tinytex: true
     mermaid format: png
 editor: source
