@@ -25,7 +25,7 @@
 
 .rf-crosswalk th,
 .rf-crosswalk td {
-  border: 1px solid #B7B7B7;
+  border: 1.5px solid #8d8d8d;
   padding: 0.45rem 0.60rem;
   vertical-align: top;
 }
@@ -38,15 +38,15 @@
 }
 
 .rf-crosswalk td.database {
-  background: #6e916e;
-  color: #FFFFFF;
+  background: #fffcd9;
+  color: #131212;
   font-weight: 800;
   text-align: center;
   vertical-align: middle;
 }
 
 .rf-crosswalk tr.group td {
-  background: #e3fcd8;
+  background: #defad2;
   color: #1F1F1F;
   font-weight: 800;
   text-align: left;
