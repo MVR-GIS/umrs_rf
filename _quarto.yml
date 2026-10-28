@@ -22,6 +22,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+    - diagram.qmd
     - casestudies.qmd
     - summary.qmd
 
@@ -65,7 +66,6 @@ book:
         - rf_cross_x_nesp.qmd
         - rf_cross_x_design_hb.qmd
 
-    - diagram.qmd
     - resources.qmd
     - references.qmd
 
