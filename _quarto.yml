@@ -23,8 +23,8 @@ book:
     - index.qmd
     - intro.qmd
     - diagram.qmd
-    - casestudies.qmd
-    - summary.qmd
+   # - casestudies.qmd
+   # - summary.qmd
 
     - part: "Restoration Features"
       chapters:
@@ -61,10 +61,10 @@ book:
         - rsf_water_util_node.qmd
         - rsf_water_util_seg.qmd
 
-    - part: "Restoration Feature Crosswalk"
-      chapters:
-        - rf_cross_x_nesp.qmd
-        - rf_cross_x_design_hb.qmd
+   # - part: "Restoration Feature Crosswalk"
+   #   chapters:
+   #     - rf_cross_x_nesp.qmd
+   #     - rf_cross_x_design_hb.qmd
 
     - resources.qmd
     - references.qmd
